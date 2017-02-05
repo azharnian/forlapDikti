@@ -1,82 +1,163 @@
 ,kode,prodi,status,jenjang,dosenTetap,mahasiswa,link
-0,46001 ,Biologi ,Aktif ,S3 ,7 ,0 ,http://forlap.dikti.go.id/prodi/detail/REY2RTU3QkQtQjQ0Ni00NERGLUI2NkUtNjc3NzgxN0U4MTA4/0
-1,61001 ,Ilmu Manajemen ,Aktif ,S3 ,5 ,10 ,http://forlap.dikti.go.id/prodi/detail/RUVFNjQyOTQtM0U1MS00MjU4LUIxOUMtRThDMjUwNUUwMEIy/0
-2,54001 ,Ilmu Pertanian ,Aktif ,S3 ,6 ,3 ,http://forlap.dikti.go.id/prodi/detail/NzlCRkFDRDUtNzhDMS00OEEwLUI4MzYtNTg2MUM5REI3MEJB/0
-3,54031 ,Ilmu Peternakan ,Aktif ,S3 ,10 ,0 ,http://forlap.dikti.go.id/prodi/detail/NzZFNzdEMzEtOUYyMy00MUI5LThCNDEtNTI3QzYxRDBBNjVD/0
-4,54104 ,Agronomi ,Aktif ,S2 ,8 ,14 ,http://forlap.dikti.go.id/prodi/detail/RThFOUQ4RjgtQTMwQy00N0QzLUE5QTItNjRCQkRGRDdENjE5/0
-5,62101 ,Akuntansi ,Aktif ,S2 ,9 ,13 ,http://forlap.dikti.go.id/prodi/detail/NTQ4NDhFRjYtNTUzQS00MjBCLTkwODAtNDFGMDE4MTRGNjdC/0
-6,63101 ,Ilmu Administrasi ,Aktif ,S2 ,8 ,61 ,http://forlap.dikti.go.id/prodi/detail/RkUxMjA4QjctNUU4RS00RUI2LUJCQkEtMEM4MTM5QjVENDVE/0
-7,46101 ,Ilmu Biologi ,Aktif ,S2 ,7 ,26 ,http://forlap.dikti.go.id/prodi/detail/RTA3NzYwM0YtODQxMC00RkFGLUE2REYtODY2QTdFM0Q5OTdC/0
-8,60101 ,Ilmu Ekonomi ,Aktif ,S2 ,7 ,11 ,http://forlap.dikti.go.id/prodi/detail/MjM1ODRFNEUtMzlDMS00MjAwLTg2QzMtOTUyREFGRjgyRTE0/0
-9,74101 ,Ilmu Hukum ,Aktif ,S2 ,10 ,20 ,http://forlap.dikti.go.id/prodi/detail/RTZCNEM5OTUtQUREQy00OUM4LUE4Q0EtMTk2MUY3MzVFNzEz/0
-10,70101 ,Ilmu Komunikasi ,Aktif ,S2 ,5 ,0 ,http://forlap.dikti.go.id/prodi/detail/MEVDRTY3MTQtQ0E0Mi00NTA1LTkyMzctNjFFRkNFM0Y4MUM3/0
-11,95129 ,Ilmu Lingkungan ,Aktif ,S2 ,3 ,3 ,http://forlap.dikti.go.id/prodi/detail/QTgwRkRCNUQtM0RDQi00RTVFLUE5ODMtQzI1QkQwRkM2NUE1/0
-12,41121 ,Ilmu Pangan ,Aktif ,S2 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/NUExRjkxMUUtOTAzRC00QzYwLTk5MUQtRTM3QTAxODAyNzYy/0
-13,54141 ,Industri Sumberdaya Hayati Kelautan ,Aktif ,S2 ,6 ,0 ,http://forlap.dikti.go.id/prodi/detail/QjA1ODdEMEYtQjJDMC00Q0IwLTg0QUQtQTY0NzY4Qzg5Rjg5/0
-14,74102 ,Kenotariatan ,Aktif ,S2 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/QkUwODI3OTgtNURFMC00MTQ4LUI4NjAtOTgzNEI1NjYxRjRF/0
-15,61101 ,Manajemen ,Aktif ,S2 ,7 ,5 ,http://forlap.dikti.go.id/prodi/detail/OEE1QjczM0UtNEQ5RS00OTI0LUFFRTMtRjg1QjM0M0ZCREIw/0
-16,54103 ,Penyuluhan Pertanian ,Aktif ,S2 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/MjlBQ0RBMEYtMkIwOC00MzUwLTk0OTItRjVBNzhCQ0E5MUYy/0
-17,54131 ,Peternakan ,Aktif ,S2 ,3 ,13 ,http://forlap.dikti.go.id/prodi/detail/NjFEMDc2QkMtQkZFNi00RTQzLUI4MzEtNzE2QjkyRkQzMkMz/0
-18,69101 ,Sosiologi ,Aktif ,S2 ,9 ,0 ,http://forlap.dikti.go.id/prodi/detail/ODY1NDNENkItQjdEOS00RTBBLTk1NEUtOUJGMzQ4RjRBOTU0/0
-19,54201 ,Agribisnis ,Aktif ,S1 ,23 ,607 ,http://forlap.dikti.go.id/prodi/detail/NUJDM0EyNzctMEIyQy00RjRFLUJFMDEtM0VFOTA1QjE5RjdD/0
-20,54211 ,Agroteknologi ,Aktif ,S1 ,56 ,1.208 ,http://forlap.dikti.go.id/prodi/detail/NkRCNENDNUEtMDA3NS00Mjc3LUFCNEEtODA0OEZBRTNGQzcz/0
-21,62201 ,Akuntansi ,Aktif ,S1 ,36 ,781 ,http://forlap.dikti.go.id/prodi/detail/NDQyRjZFREUtQzcyNy00ODc0LTg3QjUtQjU4OTRENzU0OTM2/0
-22,46201 ,Biologi ,Aktif ,S1 ,76 ,781 ,http://forlap.dikti.go.id/prodi/detail/RjZEMjkzQzgtMjE2NS00NDgxLUI3QTQtOTA4RDg0MUM2NDRE/0
-23,54243 ,Budidaya Perairan ,Aktif ,S1 ,12 ,199 ,http://forlap.dikti.go.id/prodi/detail/OTQ3QjEyNjAtNEE2Ri00OUEwLTk1MDctMjBBRjhGRkFGOTQ2/0
-24,60201 ,Ekonomi Pembangunan ,Aktif ,S1 ,26 ,698 ,http://forlap.dikti.go.id/prodi/detail/NTc0OThBMUQtN0ZGNy00Q0E0LUJBOTAtQkY5Mjk3Qzk1NTVE/0
-25,48201 ,Farmasi ,Aktif ,S1 ,24 ,334 ,http://forlap.dikti.go.id/prodi/detail/QTREMzgyQUMtNUQ1NC00QkNCLTg3MTMtRDQzQkI5NDY2RUYy/0
-26,45201 ,Fisika ,Aktif ,S1 ,17 ,233 ,http://forlap.dikti.go.id/prodi/detail/ODc2QkNCOUMtMTQ3MS00QjI2LUIwNDQtRTk3NTU3M0FDMkI4/0
-27,64201 ,Hubungan Internasional ,Aktif ,S1 ,11 ,227 ,http://forlap.dikti.go.id/prodi/detail/MUJEQ0FENUQtMjZFMy00RTBCLTk2NEYtOUVEOTlEMkEyRjUw/0
-28,63201 ,Ilmu Administrasi Negara ,Aktif ,S1 ,21 ,391 ,http://forlap.dikti.go.id/prodi/detail/NkFDRjcxQ0EtNDY4RS00MUZBLUFCQjgtMUY5MTM0Mjk1MzBE/0
-29,41203 ,Ilmu dan Teknologi Pangan ,Aktif ,S1 ,21 ,290 ,http://forlap.dikti.go.id/prodi/detail/NTBDNUQ0QjYtRkMwQS00QkI0LThERUQtNEZBRTJCRjVCMDlG/0
-30,13211 ,Ilmu Gizi ,Aktif ,S1 ,6 ,193 ,http://forlap.dikti.go.id/prodi/detail/OUUwNzk5REQtQzIwRi00QjEzLTgxOTctOTU2NjczMDBBQUM2/0
-31,74201 ,Ilmu Hukum ,Aktif ,S1 ,64 ,1.770 ,http://forlap.dikti.go.id/prodi/detail/M0Q2RkE1NEUtRDEzMC00M0I3LUFBMUEtMkFCMjg5RUUyNEI2/0
-32,54241 ,Ilmu Kelautan ,Aktif ,S1 ,7 ,215 ,http://forlap.dikti.go.id/prodi/detail/MTcwNUMwQUEtRjYwNC00ODIzLUI4MjEtRUM5RDYzMkIzMjE5/0
-33,14201 ,Ilmu Keperawatan ,Aktif ,S1 ,29 ,397 ,http://forlap.dikti.go.id/prodi/detail/Mzk5QzhCQTEtQTAzQS00REE1LUIyMzgtMEYwMUQzNDBGQUIw/0
-34,70201 ,Ilmu Komunikasi ,Aktif ,S1 ,16 ,367 ,http://forlap.dikti.go.id/prodi/detail/NTEwM0QzMEYtOUFEMi00RDBELUFBQjAtQUVDNUQ3NUQyQ0Mz/0
-35,67201 ,Ilmu Politik ,Aktif ,S1 ,17 ,272 ,http://forlap.dikti.go.id/prodi/detail/RDFFMEFCRDQtREJEMC00NjI3LTkwNjUtNTY0NkZFRUQ1N0JD/0
-36,11201 ,Kedokteran ,Aktif ,S1 ,57 ,449 ,http://forlap.dikti.go.id/prodi/detail/RDU1MDQzQ0ItRkI3Qy00RTk2LUEzQ0QtMUQwNTA4QUI3QTQy/0
-37,13201 ,Kesehatan Masyarakat ,Aktif ,S1 ,27 ,271 ,http://forlap.dikti.go.id/prodi/detail/QjdENjU0QjgtQjYzQS00REFFLUIyMkUtMzFCRTRCNjU4MTBG/0
-38,47201 ,Kimia ,Aktif ,S1 ,26 ,226 ,http://forlap.dikti.go.id/prodi/detail/ODRFNTlDNTUtMjAyRi00Rjc2LUI0QjEtMjQ5MzNBRjIzNTdD/0
-39,61201 ,Manajemen ,Aktif ,S1 ,24 ,682 ,http://forlap.dikti.go.id/prodi/detail/OTQxOUJDMTMtNTdERi00M0FDLTg2NTUtNjZBODgyODQ4MjE1/0
-40,54242 ,Manajemen Sumber Daya Perairan ,Aktif ,S1 ,12 ,192 ,http://forlap.dikti.go.id/prodi/detail/MERGRkMwMzQtNTUyMS00NkM0LTlFNzktODVBM0MzRjQ3ODY3/0
-41,44201 ,Matematika ,Aktif ,S1 ,21 ,256 ,http://forlap.dikti.go.id/prodi/detail/QUU1N0ExQkMtNDgyNS00RDAxLUJGM0UtQ0VCNEQwODdDRkY2/0
-42,88203 ,Pendidikan Bahasa Inggris ,Aktif ,S1 ,8 ,0 ,http://forlap.dikti.go.id/prodi/detail/RDRDNkI1NjktRjQ5NC00QTFELTg3QzAtRDgxODcyRkU0MEJB/0
-43,88201 ,Pendidikan Bahasa dan Sastra Indonesia ,Aktif ,S1 ,6 ,93 ,http://forlap.dikti.go.id/prodi/detail/NDFBNDQyNUQtNEMzMi00Q0RBLUJFQTEtMDI4QzBDQTQxRDA2/0
-44,12201 ,Pendidikan Dokter Gigi ,Aktif ,S1 ,12 ,253 ,http://forlap.dikti.go.id/prodi/detail/MUZEODBENDAtRDEwNS00MDRDLThGQjctNjM5NUFEQkY0QkNG/0
-45,87202 ,Pendidikan Ekonomi ,Aktif ,S1 ,7 ,99 ,http://forlap.dikti.go.id/prodi/detail/ODgxRjJGOUMtRkIwMy00MTMyLTg0NDItNEVERjI1RTRENkQ3/0
-46,85201 ,Pendidikan Jasmani Kesehatan dan Rekreasi ,Aktif ,S1 ,6 ,92 ,http://forlap.dikti.go.id/prodi/detail/OUFDRUJDNUMtMUIyMC00MDE3LUEwNjEtQzlBM0JCNzQ1RTky/0
-47,54231 ,Peternakan ,Aktif ,S1 ,52 ,1.210 ,http://forlap.dikti.go.id/prodi/detail/QzA4NzkyMkUtNjIxNi00MjY1LThDOTQtRjY4RTJDNDFFMjg0/0
-48,79201 ,Sastra Indonesia ,Aktif ,S1 ,9 ,224 ,http://forlap.dikti.go.id/prodi/detail/OTlEM0QwQjQtMzg5Qi00MEExLTk3NzYtNjk4QzhFNjIyNURG/0
-49,79202 ,Sastra Inggris ,Aktif ,S1 ,15 ,352 ,http://forlap.dikti.go.id/prodi/detail/NjgxMUM4QTAtMTc0OC00NTI1LTlEQTAtQkI1OTg0QTFBOUJC/0
-50,79204 ,Sastra Jepang ,Aktif ,S1 ,6 ,188 ,http://forlap.dikti.go.id/prodi/detail/M0FDNjA2QjItQkI2QS00NDEzLTlFRTAtNkE0QkU0RkNFN0E3/0
-51,69201 ,Sosiologi ,Aktif ,S1 ,23 ,451 ,http://forlap.dikti.go.id/prodi/detail/OEVENTBCRTEtMjI2RC00RjQwLUI0NEQtNDk4MjJDNkRERDMx/0
-52,20201 ,Teknik Elektro ,Aktif ,S1 ,20 ,283 ,http://forlap.dikti.go.id/prodi/detail/QTMzODdGNTUtN0M0RC00OUEyLUE4RTEtQkI5ODM1MEIzRDlC/0
-53,34201 ,Teknik Geologi ,Aktif ,S1 ,10 ,289 ,http://forlap.dikti.go.id/prodi/detail/MTY3ODZGNDEtQjJCNy00NEY0LUEyMTYtQTUyQjMxRjExMEU4/0
-54,26201 ,Teknik Industri ,Aktif ,S1 ,0 ,31 ,http://forlap.dikti.go.id/prodi/detail/OEUzNjVEMDItOTY1OS00NUQzLTk5QUEtMDJCRUM5MDBGNUJB/0
-55,55201 ,Teknik Informatika ,Aktif ,S1 ,9 ,305 ,http://forlap.dikti.go.id/prodi/detail/MjM5OThFNDItMzJBMi00REE5LTk0MkYtNTcwNzI2QTJFMUVD/0
-56,41201 ,Teknik Pertanian ,Aktif ,S1 ,18 ,269 ,http://forlap.dikti.go.id/prodi/detail/MzgwQUFFNUMtMjg0Ni00Q0Y2LTk1QUEtQjFDRjk4QUIwQzM1/0
-57,22201 ,Teknik Sipil ,Aktif ,S1 ,22 ,306 ,http://forlap.dikti.go.id/prodi/detail/MTYyMjg2OUQtRjYwNS00NTg4LThCQzktMzBGRTU1ODVEREJF/0
-58,62901 ,Profesi Akuntan ,Aktif ,Profesi ,10 ,4 ,http://forlap.dikti.go.id/prodi/detail/NkM3NjA2RTgtNjI0NS00NEI4LUEyNzMtM0MyOEY2QzI2QzM2/0
-59,48091 ,Profesi Apoteker ,Aktif ,Profesi ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/MzYzNkEyOUUtMUU2Ni00MjFDLTk3QzAtN0NDNjg4RTEyMDU3/0
-60,11901 ,Profesi Dokter ,Aktif ,Profesi ,11 ,96 ,http://forlap.dikti.go.id/prodi/detail/Mjg1QjAxOEItNTY1NS00MTFDLUFBNzctOUZBNzU1MTZBNkRG/0
-61,12901 ,Profesi Dokter Gigi ,Aktif ,Profesi ,8 ,20 ,http://forlap.dikti.go.id/prodi/detail/OEY1QkRCNTAtMTE2Qy00OTY4LTk4MjQtOEM5MDU2RDE1NTg0/0
-62,14901 ,Profesi Ners ,Aktif ,Profesi ,7 ,50 ,http://forlap.dikti.go.id/prodi/detail/NUYwQ0E5NTYtNEEzRS00RTY0LTk4NzItRjhBNDNBNjcyQTZD/0
-63,63413 ,Administrasi Keuangan ,Aktif ,D3 ,6 ,212 ,http://forlap.dikti.go.id/prodi/detail/OTE1NzVGQzUtN0Q5Ny00QzNFLUJFQkQtNTg4QzE3MzE4NjQ0/0
-64,54401 ,Agrobisnis ,Aktif ,D3 ,6 ,177 ,http://forlap.dikti.go.id/prodi/detail/QjU3NkNGQUYtRjA3QS00N0U1LTlCRDQtM0RCNTg5ODRGRTUz/0
-65,62401 ,Akuntansi ,Aktif ,D3 ,8 ,212 ,http://forlap.dikti.go.id/prodi/detail/N0RCNDJFM0UtQUQ1Mi00QjMzLTk1RkUtNjIyOTdCNkVCQjhF/0
-66,79402 ,Bahasa Inggris ,Aktif ,D3 ,8 ,182 ,http://forlap.dikti.go.id/prodi/detail/MjY0NkQxM0YtNTM5RS00Q0Q3LUI1Q0ItQjk2MEU5Qzc3RENG/0
-67,79409 ,Bahasa Mandarin ,Aktif ,D3 ,4 ,65 ,http://forlap.dikti.go.id/prodi/detail/NEQ2NzQ3NkUtRjMxMy00MTYwLTg1MzktNDdENkJCODZBRDA2/0
-68,54442 ,Biologi ,Aktif ,D3 ,7 ,111 ,http://forlap.dikti.go.id/prodi/detail/MDkyMzNBODMtQkE5Ri00ODkzLUFDMTMtNTk1NzgxMkQwMkIy/0
-69,61402 ,Bisnis Internasional ,Aktif ,D3 ,9 ,129 ,http://forlap.dikti.go.id/prodi/detail/QkExQUI4NjUtMTg2Ri00NjdBLUE3RjgtNjMxN0YxRUU5OTI4/0
-70,63412 ,Kesekretariatan ,Aktif ,D3 ,7 ,149 ,http://forlap.dikti.go.id/prodi/detail/MkMyQjA1RjgtN0E0OS00MTZBLThFQTUtMTNBNTBDNjM4NjI0/0
-71,54415 ,Perencanaan Sumber Daya Lahan ,Aktif ,D3 ,7 ,101 ,http://forlap.dikti.go.id/prodi/detail/QUM4OUNEM0YtM0EwQy00NDNGLUE2RjItNzkxREVGODY1N0Q4/0
-72,54432 ,Produksi Ternak ,Aktif ,D3 ,17 ,223 ,http://forlap.dikti.go.id/prodi/detail/Q0Q3RUQ4RjEtRTM3OS00ODdFLTg4NjAtNUU4MTRGNTc1MDQz/0
-73,26401 ,Teknik Industri ,Pembinaan ,D3 ,3 ,46 ,http://forlap.dikti.go.id/prodi/detail/MUQzOEQzNUYtQjA1NS00MTVFLTgwOUQtQ0YwODNCRDNBRkQw/0
-74,46501 ,"Biologi, Kampus K. Bandung ",Pembinaan ,D2 ,0 ,5 ,http://forlap.dikti.go.id/prodi/detail/QUY2N0E1MzAtOUU2QS00MzhCLTg3NzEtMUJDOTYyM0IxNTZF/0
-75,45501 ,"Fisika, Kampus K. Bandung ",Pembinaan ,D2 ,0 ,4 ,http://forlap.dikti.go.id/prodi/detail/RjRCOERDMEItNDY3RC00MUU2LUI2NDItNTRCRUNCNDI1MDI5/0
-76,47501 ,"Kimia, Kampus K. Bandung ",Pembinaan ,D2 ,0 ,5 ,http://forlap.dikti.go.id/prodi/detail/RURCODI1OTUtOEYwRS00Q0MwLUE5NjUtRTM4OUVGOEE1QUI5/0
-77,54554 ,Pengelolaan Sumber Daya Perikanan. K Kab. Rembang ,Aktif ,D2 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/Q0JEMEZFNEMtQkNEQy00RTk3LTkzMkYtMzA4ODlERURERDAx/0
-78,46601 ,Biologi Terapan ,Pembinaan ,D1 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/RjQ3QjI0NDUtOTEwMC00Q0U4LUJEQTQtRkMxRjdCNDlCMjA4/0
-79,54647 ,"Budidaya Perikanan (Lele, Bawal) ",Pembinaan ,D1 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/QzhBQjJBMDYtNTU4Mi00Njg3LTlBMEUtMEZBOTRCRjI5QkNF/0
-80,54631 ,Peternakan (Agribisnis Ternak Unggas) ,Pembinaan ,D1 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/NTU3NzQ3NTktRkM3Qy00M0U4LTg1QTctNDI1QTgxRDQyQTE1/0
+0,23001 ,Arsitektur Dan Perkotaan ,Aktif ,S3 ,1 ,1 ,http://forlap.dikti.go.id/prodi/detail/RURCQTQwRkEtMzVENC00OTJFLTkwMzEtMjgwQTk2RUI1N0FF/0
+1,62001 ,Ilmu Akuntansi ,Aktif ,S3 ,0 ,23 ,http://forlap.dikti.go.id/prodi/detail/OTE2NzdBNTItNzhEQi00N0M5LThCNTEtRjU2MUU3NTU2N0U3/0
+2,46001 ,Ilmu Biologi ,Aktif ,S3 ,5 ,4 ,http://forlap.dikti.go.id/prodi/detail/RkIxMDA5QkUtRTcxMi00OTI5LUI3RkUtN0U5NzYyQTcxNjNF/0
+3,60001 ,Ilmu Ekonomi ,Aktif ,S3 ,0 ,11 ,http://forlap.dikti.go.id/prodi/detail/ODg5MjdFQUQtMUFCNi00MzJCLThEQUUtNkIxQzY4MUQ1MkQw/0
+4,48001 ,Ilmu Farmasi ,Aktif ,S3 ,7 ,11 ,http://forlap.dikti.go.id/prodi/detail/MUVCQTVBRjgtREVDRC00RERDLTk0NjAtNDgzNzc3Q0ZEOEVC/0
+5,45001 ,Ilmu Fisika ,Aktif ,S3 ,3 ,2 ,http://forlap.dikti.go.id/prodi/detail/NjI4NTdGMzgtRTczQy00MkZGLUI3QjktNzc5Qzc0MEZGQkQ4/0
+6,74001 ,Ilmu Hukum ,Aktif ,S3 ,4 ,2 ,http://forlap.dikti.go.id/prodi/detail/Njg4RkM0MTAtRDg0OC00QjU2LTk2MDUtNkM2OUExRDA3MDEz/0
+7,11001 ,Ilmu Kedokteran ,Aktif ,S3 ,0 ,8 ,http://forlap.dikti.go.id/prodi/detail/MTg4QUFEMkEtQzRDNi00MDg3LThEQkYtQkQ2MTI2QjYzRDNF/0
+8,12001 ,Ilmu Kedokteran Gigi ,Aktif ,S3 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/QTREQzJGNEEtNzg5Ny00MTEyLUFBNTYtQTVBNjg3OUJDNjFC/0
+9,13001 ,Ilmu Kesehatan Masyarakat ,Aktif ,S3 ,6 ,10 ,http://forlap.dikti.go.id/prodi/detail/RkM5Qjg5NDctNDAzOS00OTc5LTlFMEMtNUFEQTg2MTcyNDI4/0
+10,47001 ,Ilmu Kimia ,Aktif ,S3 ,4 ,3 ,http://forlap.dikti.go.id/prodi/detail/M0M3QzhFRUItNkU3MC00NkZGLUFDMTgtODc3RkZBMTM2MUJD/0
+11,55001 ,Ilmu Komputer ,Aktif ,S3 ,6 ,2 ,http://forlap.dikti.go.id/prodi/detail/NTU2NTM3MkEtRUY0OS00OEFFLTg1QTMtODc4RjE5MUI3OTYw/0
+12,61001 ,Ilmu Manajemen ,Aktif ,S3 ,0 ,29 ,http://forlap.dikti.go.id/prodi/detail/RDk1ODNGMUMtREI1Ri00RTUxLTg0MEQtQjI0NDg5QjVEQ0Iw/0
+13,44002 ,Ilmu Matematika ,Aktif ,S3 ,4 ,36 ,http://forlap.dikti.go.id/prodi/detail/NUExRTRGOEQtOThGNi00RkFCLThGMjktQUNEMDA2RkFDODhF/0
+14,95001 ,Ilmu Pengelolaan Sumber Daya Alam Dan Lingkungan ,Aktif ,S3 ,2 ,3 ,http://forlap.dikti.go.id/prodi/detail/RjVCNjZFOUEtM0Q5QS00MUExLUFEQ0ItODQwQjkzQUY5NzU2/0
+15,95003 ,Ilmu Perencanaan Pembangunan Wilayah Dan Pedesaan ,Aktif ,S3 ,0 ,3 ,http://forlap.dikti.go.id/prodi/detail/N0Q1REJBRTUtOTU5Ri00MkZBLUEyQzQtOEE5MTU4QTFBMDRG/0
+16,54001 ,Ilmu Pertanian ,Aktif ,S3 ,3 ,69 ,http://forlap.dikti.go.id/prodi/detail/N0ZDMkEzMEMtREEyMi00RjI2LTkzNDEtOENEMjdFRTQ1Mzg1/0
+17,26001 ,Ilmu Teknik Industri ,Aktif ,S3 ,0 ,6 ,http://forlap.dikti.go.id/prodi/detail/OThFQjY5MjEtODA4Qi00RjYwLUIwRDgtMzE5OTAyMTIwNEZB/0
+18,24001 ,Ilmu Teknik Kimia ,Aktif ,S3 ,1 ,1 ,http://forlap.dikti.go.id/prodi/detail/Mjk3RkM0NDktNEY4Qi00MDQ3LTlFRTUtRjNFQjlFQzZDNkQ4/0
+19,21001 ,Ilmu Teknik Mesin ,Aktif ,S3 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/MzIxMkFGQTYtQ0Y4OS00QjZGLUE2OUUtODVGODIwNDgwNTVD/0
+20,22001 ,Ilmu Teknik Sipil ,Aktif ,S3 ,8 ,2 ,http://forlap.dikti.go.id/prodi/detail/QUIzMTFEQTktOUQzNS00NDk1LThFREEtM0VFNEQzODU2MzJC/0
+21,79002 ,Linguistik ,Aktif ,S3 ,0 ,17 ,http://forlap.dikti.go.id/prodi/detail/Njk1QzNEMTktQkFBRS00OTI0LTgyMTMtMEUwN0NBNzYyREJD/0
+22,95006 ,Studi Pembangunan ,Aktif ,S3 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/MEREMjc2NEMtMUVBOC00RUI0LUE5QjctMDMwODJBMkJCMjc4/0
+23,13163 ,Administrasi Dan Kebijakan Kesehatan ,Tutup ,S2 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/MTEyM0EwODEtNDYwRi00MDdFLUI1QzUtRDc3OUMxQzRDQTI4/0
+24,54101 ,Agribisnis ,Aktif ,S2 ,6 ,3 ,http://forlap.dikti.go.id/prodi/detail/OUY5NkQyNDMtMTU0Qi00RDEzLUFEMTItOTA3Nzk1RkYwQzM2/0
+25,54111 ,Agroekoteknologi ,Aktif ,S2 ,5 ,2 ,http://forlap.dikti.go.id/prodi/detail/QjA4MjRDRjYtMTc0Ny00OEYzLUI5RTQtNzNBQ0IzNTJDMTY2/0
+26,62101 ,Akuntansi ,Aktif ,S2 ,8 ,5 ,http://forlap.dikti.go.id/prodi/detail/ODI1NDRDNjQtNUVCQS00REVDLUEyM0QtNDQ4MEJBQTAyOUM4/0
+27,23101 ,Arsitektur ,Aktif ,S2 ,5 ,4 ,http://forlap.dikti.go.id/prodi/detail/OTZBQzc3OEQtRUU0NS00RDA5LUE5NjgtQTREQTIxREZDNzU0/0
+28,88103 ,Bahasa Inggris ,Aktif ,S2 ,8 ,0 ,http://forlap.dikti.go.id/prodi/detail/NDA5MTEwOEEtQjIyNi00QTJGLTk2OTItQTU2NTlFMDA4QzFG/0
+29,46101 ,Biologi ,Aktif ,S2 ,4 ,73 ,http://forlap.dikti.go.id/prodi/detail/NDg0NEEzNTMtNTdBQi00RTZBLTk4MkQtQzNERkI2RTY3MDM5/0
+30,48101 ,Farmasi ,Aktif ,S2 ,6 ,4 ,http://forlap.dikti.go.id/prodi/detail/ODA4MjdFQ0UtM0RFMS00RDFGLTkzMDYtMUVEMDM3MTJFMUNF/0
+31,45101 ,Fisika ,Aktif ,S2 ,5 ,3 ,http://forlap.dikti.go.id/prodi/detail/QTY5MjM5REQtRDgxMS00RjZFLUE2NDEtRkVFRDZCOUZGRUVC/0
+32,11106 ,Ilmu Biomedik ,Aktif ,S2 ,7 ,2 ,http://forlap.dikti.go.id/prodi/detail/ODgyNTI4RDUtQ0E1OC00QTU2LUEwODUtQjIzOUU1OEIwNjND/0
+33,60101 ,Ilmu Ekonomi ,Aktif ,S2 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/RkE4RTU1MTAtOUYwOS00MTc2LTgwMzktODE5NzE4MDdBRURG/0
+34,74101 ,Ilmu Hukum ,Aktif ,S2 ,5 ,2 ,http://forlap.dikti.go.id/prodi/detail/QjBBQUJENjYtQkJCMS00MEIxLTgxMUEtRjk1MDRFQjJCMUM0/0
+35,12101 ,Ilmu Kedokteran Gigi ,Aktif ,S2 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/QzA1MTY1QjItOUM2NS00RTZGLTgzNEYtQUUyMkNGQTYzOUU3/0
+36,11103 ,Ilmu Kedokteran Klinis ,Aktif ,S2 ,4 ,53 ,http://forlap.dikti.go.id/prodi/detail/NTEyNEZDMTYtOUMyNC00NDY2LUFBN0UtNTJGRDI4QkFFOTM0/0
+37,11104 ,Ilmu Kedokteran Tropis ,Aktif ,S2 ,3 ,2 ,http://forlap.dikti.go.id/prodi/detail/RkQ2RDBGRUEtOUUzNS00RTZFLTlCOTQtN0QxQTMyQzE5MkY0/0
+38,14101 ,Ilmu Keperawatan ,Aktif ,S2 ,6 ,64 ,http://forlap.dikti.go.id/prodi/detail/REFCN0ZDODctMDYxRS00MEQwLTkxNEItNUJEQkY1MDlBQkJF/0
+39,13101 ,Ilmu Kesehatan Masyarakat ,Aktif ,S2 ,10 ,3 ,http://forlap.dikti.go.id/prodi/detail/Mzk4NTM3NTEtOTIwQy00RjIzLUIzNEQtQTI3MEU1RTQzNUM0/0
+40,70101 ,Ilmu Komunikasi ,Aktif ,S2 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/RjAyQThGNkYtNDQxNC00QkNGLUFGQTctODVBOTJFOUU5NzND/0
+41,61101 ,Ilmu Manajemen ,Aktif ,S2 ,0 ,5 ,http://forlap.dikti.go.id/prodi/detail/MUNGRUUwQTYtREE4Ri00N0I2LUE3ODYtMTZGRTY0QzhBMTRD/0
+42,54131 ,Ilmu Peternakan ,Aktif ,S2 ,7 ,3 ,http://forlap.dikti.go.id/prodi/detail/NzU2Qjg5NzAtNzM4Ny00NDVBLUJFQTMtNzE2NkEyMDczMUFD/0
+43,80101 ,Ilmu Sejarah ,Aktif ,S2 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/QTI4NzlEMjktNEVDNC00NzZFLUJFODMtMzQ1ODczNzQwMDM1/0
+44,54105 ,Ilmu Tanah ,Tutup ,S2 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/NDY4MkI0NUQtRUY1RS00RjlCLTlCRUItNTBCNzlEODMxQ0ZF/0
+45,74102 ,Kenotariatan ,Aktif ,S2 ,4 ,2 ,http://forlap.dikti.go.id/prodi/detail/NkM4M0UwQTktM0Y5MS00QTgxLUE1NkEtNzI4MUExNTg0NjNB/0
+46,47101 ,Kimia ,Aktif ,S2 ,10 ,3 ,http://forlap.dikti.go.id/prodi/detail/OEZEOTlDODMtNUJCRS00MzI5LThBODYtMTA3NDNCQTBEMDEz/0
+47,79102 ,Linguistik ,Aktif ,S2 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/MUIzMTMxMTUtREQ4My00MzczLTgwRjQtODJBREU3QTFGRUQ1/0
+48,41121 ,Magister Ilmu Pangan ,Aktif ,S2 ,2 ,3 ,http://forlap.dikti.go.id/prodi/detail/OTNFODA0RDItMjhFNC00NzhFLUJFQzYtMTZFRTgzNzU0RkUz/0
+49,61102 ,Magister Manajemen ,Aktif ,S2 ,0 ,3 ,http://forlap.dikti.go.id/prodi/detail/MUNCNkE2MDItNzIyOC00OTE5LThCQ0QtMEUwQjEyQ0U3QTRC/0
+50,69101 ,Magister Sosiologi ,Aktif ,S2 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/NjFFQ0NFNzEtMTlERC00RkNELTkxMzgtOTk0RjY0NzNGQURF/0
+51,13151 ,Manajemen Kesehatan Lingkungan ,Tutup ,S2 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/ODI1QjZFOTUtQjE2Ni00N0Q0LThBOTMtODMwMTVCRDRDNzI0/0
+52,61103 ,Manajemen Properti ,Aktif ,S2 ,0 ,3 ,http://forlap.dikti.go.id/prodi/detail/MjMwRjlEMzgtQTUxRC00NDdDLUExMDQtM0Y2ODY2N0Y4N0VC/0
+53,44101 ,Matematika ,Aktif ,S2 ,2 ,2 ,http://forlap.dikti.go.id/prodi/detail/QjA5OTBDRjUtRkM5My00MURFLUE0OTAtNTg4Nzc4NkZDQjM2/0
+54,91101 ,Penciptaan dan Pengkajian Seni ,Aktif ,S2 ,1 ,3 ,http://forlap.dikti.go.id/prodi/detail/MTA1QTQ0QUEtRTlFNC00RTI3LUJERkUtMEM3QkM5RUFGOTMx/0
+55,95101 ,Pengelolaan Sumber Daya Alam dan Lingkungan ,Aktif ,S2 ,2 ,43 ,http://forlap.dikti.go.id/prodi/detail/N0NDNzNDQkMtMzgyNS00OTYyLTkwMTMtQjVBRjRGRDZFRkJG/0
+56,95103 ,Perencanaan Pembangunan Wilayah Dan Pedesaan ,Aktif ,S2 ,0 ,3 ,http://forlap.dikti.go.id/prodi/detail/QzA0RTMzQTktMjhERi00M0IwLUJBNTUtQTNGREEwMDAzQTcy/0
+57,73101 ,Psikologi ,Aktif ,S2 ,6 ,3 ,http://forlap.dikti.go.id/prodi/detail/M0E3OUZCNDktQjFDRS00RkVDLTlBMjMtQzg2ODVGNzRFNDZC/0
+58,73103 ,Psikologi Profesi ,Aktif ,S2 ,0 ,3 ,http://forlap.dikti.go.id/prodi/detail/REQ4NUVCMjQtREYxNS00QzY0LUFCRDUtMjIxMkY4MUU3QjMw/0
+59,60102 ,Studi Pembangunan ,Aktif ,S2 ,0 ,3 ,http://forlap.dikti.go.id/prodi/detail/MjRFM0Y3QkMtMzAxNi00NTgxLTg1RjktQjM4OTNCMTI3MTRC/0
+60,20101 ,Teknik Elektro ,Aktif ,S2 ,4 ,2 ,http://forlap.dikti.go.id/prodi/detail/QkIyOUJBMDQtRTM3MS00NzcyLTgwOTAtMkExRUU0QkNCM0ZC/0
+61,26101 ,Teknik Industri ,Aktif ,S2 ,9 ,2 ,http://forlap.dikti.go.id/prodi/detail/MTgwMTZGNDctQkU2MS00OUJFLUE0QzAtOTg0RTdCNTE4ODFF/0
+62,55101 ,Teknik Informatika ,Aktif ,S2 ,1 ,4 ,http://forlap.dikti.go.id/prodi/detail/MUU0RTk0NDQtOUM5NS00RkNCLUJBQTYtMTMyNEFGMTA5OTEy/0
+63,24101 ,Teknik Kimia ,Aktif ,S2 ,10 ,6 ,http://forlap.dikti.go.id/prodi/detail/NTAyQUJEMzUtOTQ1NS00OEVBLTgxRTItNDlBQzhGNzUwMzYz/0
+64,21101 ,Teknik Mesin ,Aktif ,S2 ,13 ,1 ,http://forlap.dikti.go.id/prodi/detail/OEQ4NEE4NEYtRUNFRC00Q0IyLThFRDMtOTFCNkQ1MkNEQThE/0
+65,22101 ,Teknik Sipil ,Aktif ,S2 ,11 ,2 ,http://forlap.dikti.go.id/prodi/detail/QUExMDlDQUQtOTJCQi00RkFFLUI1MUItQkIzRDY0RUM2NUZB/0
+66,11706 ,Anestesiologi Dan Reanimasi ,Aktif ,Sp-1 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/MTg5MURENDMtMEE1RS00MTU0LUFGOUYtQzA5QjQ0M0VEOTY1/0
+67,11707 ,Ilmu Bedah ,Aktif ,Sp-1 ,0 ,3 ,http://forlap.dikti.go.id/prodi/detail/MzMzOUM5RUQtODg2My00NjM5LTlFNUYtNzlDRTM3QzY1MUU2/0
+68,11712 ,Ilmu Bedah Orthopaedi Dan Traumatologi ,Aktif ,Sp-1 ,0 ,1 ,http://forlap.dikti.go.id/prodi/detail/MkQ1RkVDNUQtN0I5OS00QkZDLUJDQTctMThDQUVDRkI5RjQx/0
+69,11729 ,Ilmu Bedah Syaraf ,Aktif ,Sp-1 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/RjlFN0Y0MjYtQkZGMC00NkY0LUJCQTYtNjFDMDJBQTMzRkZD/0
+70,11708 ,Ilmu Kebidanan Dan Penyakit Kandungan ,Aktif ,Sp-1 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/MTBDNDA4MEQtRkQ4NC00RDg0LTlDMkMtQzhGNDQ4RjNDNEI1/0
+71,11710 ,Ilmu Kedokteran Forensik ,Aktif ,Sp-1 ,0 ,8 ,http://forlap.dikti.go.id/prodi/detail/MzIyMUMyMzEtRDM3RS00NEMxLTlFNUEtODkzOTVGRDg4MDAz/0
+72,11711 ,Ilmu Kesehatan Anak ,Aktif ,Sp-1 ,0 ,29 ,http://forlap.dikti.go.id/prodi/detail/ODQ3NjU1NEItQTNFNi00NDdFLUE2RjktQTNFNDFFMkYzQjZD/0
+73,11718 ,Ilmu Patologi Anatomi ,Aktif ,Sp-1 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/OEMyRDFGMTctRDFERS00NzBDLTgxRjAtNTY2QzM0ODM3RTQ3/0
+74,11719 ,Ilmu Patologi Klinik ,Aktif ,Sp-1 ,0 ,4 ,http://forlap.dikti.go.id/prodi/detail/QUQ3MEJBNTktOTg3RC00MThFLTg1N0MtN0FFQTVBOEIxQjY2/0
+75,11702 ,Ilmu Penyakit Dalam ,Aktif ,Sp-1 ,0 ,25 ,http://forlap.dikti.go.id/prodi/detail/RDIzNkNBQjAtNEQ2Ny00ODVELUFDNjYtRkE2RUEwRDc4NDQ2/0
+76,11715 ,Ilmu Penyakit Jantung Dan Pembuluh Darah ,Aktif ,Sp-1 ,0 ,4 ,http://forlap.dikti.go.id/prodi/detail/RDUxQkU5MzAtQ0E3Ni00RTMwLThDQjMtMjQzN0NBMzAyRTkw/0
+77,11704 ,Ilmu Penyakit Kulit Dan Kelamin ,Aktif ,Sp-1 ,0 ,39 ,http://forlap.dikti.go.id/prodi/detail/OEI4M0JBQTMtQzVFNC00M0JGLTg1NjctMkI1MTE5MkFCQTM2/0
+78,11701 ,Ilmu Penyakit Mata ,Aktif ,Sp-1 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/MDE3Rjc2NTgtMEQ0MS00QzdBLUE4MjgtMzRBMzFFREIwRTdD/0
+79,11709 ,Ilmu Penyakit Paru ,Aktif ,Sp-1 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/OUU5NDcwOTYtMjk5NC00QzEzLUI5MUItRURGOTQyQjNDOTBG/0
+80,11703 ,Ilmu Penyakit Syaraf ,Aktif ,Sp-1 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/QjMzQzMwNDItNkUyMi00RTA2LTg4OUItOEQzRDVCNDgyQ0NE/0
+81,11705 ,Ilmu Penyakit THT ,Aktif ,Sp-1 ,0 ,7 ,http://forlap.dikti.go.id/prodi/detail/RjlBQzA0MDItN0E5RC00RUY4LUJENUMtMjM2OTAyNUIwMTVC/0
+82,12703 ,Konservasi Gigi ,Aktif ,Sp-1 ,3 ,2 ,http://forlap.dikti.go.id/prodi/detail/M0Q4MDA3NzktOTFGRC00QjNGLUFEMjktQURCNUQzQkUzQkY1/0
+83,12706 ,Ortodonsia ,Aktif ,Sp-1 ,3 ,2 ,http://forlap.dikti.go.id/prodi/detail/RUIzNTM4OTUtNUFEMy00NDJBLTlENTItQ0RBMDREQTZGNzhE/0
+84,12705 ,Periodonsia ,Aktif ,Sp-1 ,6 ,2 ,http://forlap.dikti.go.id/prodi/detail/QzNCRDc3MzAtOTFDNS00MjVDLTgxRkUtMUE0QjRBOEY3OUM2/0
+85,12707 ,Prostodonsia ,Aktif ,Sp-1 ,4 ,2 ,http://forlap.dikti.go.id/prodi/detail/QjI0REY0M0ItQjRCRC00RTA3LUFDMEUtOUFBMTE1NDJDMjc2/0
+86,11724 ,Psikiatri ,Aktif ,Sp-1 ,0 ,2 ,http://forlap.dikti.go.id/prodi/detail/QzlENjQwQkYtQUZBMS00OTVBLTk5MTktNzU0Q0ExMkQ0QkVC/0
+87,54201 ,Agribisnis ,Aktif ,S1 ,16 ,2 ,http://forlap.dikti.go.id/prodi/detail/RTA3RkJEQTYtQUYzNi00QURFLTk3RjUtQjM3MTJERjE5NkU0/0
+88,54211 ,Agroekoteknologi ,Aktif ,S1 ,58 ,2 ,http://forlap.dikti.go.id/prodi/detail/QUZCMDI5QkUtMUMzNi00NDY1LTkwRTgtQjQyODEwODY0MzZF/0
+89,62201 ,Akuntansi ,Aktif ,S1 ,24 ,994 ,http://forlap.dikti.go.id/prodi/detail/ODZCMEJFQjEtOTg1MC00RDUyLTlCMEQtMkRBRUUyQUM1RDU0/0
+90,82201 ,Antropologi Sosial ,Aktif ,S1 ,21 ,369 ,http://forlap.dikti.go.id/prodi/detail/MzkwOEIwNDktMDEzNy00NkNGLTk4QjctRUY2MUZFMTY2MDc1/0
+91,23201 ,Arsitektur ,Aktif ,S1 ,23 ,443 ,http://forlap.dikti.go.id/prodi/detail/RUFDMzU5QTUtNTM5RS00NkYzLTk0RjktMzdEMTYyQkM2OTI0/0
+92,46201 ,Biologi ,Aktif ,S1 ,22 ,2 ,http://forlap.dikti.go.id/prodi/detail/RThBRTQ2RjMtMTUwNy00RDk2LUIyRjgtNzc0REJGM0Q0Q0Qz/0
+93,60201 ,Ekonomi Pembangunan ,Aktif ,S1 ,18 ,675 ,http://forlap.dikti.go.id/prodi/detail/MjFDN0UwNzAtMjg1OC00NUUwLUE1MzYtRThERjIzRjYzNjkx/0
+94,91201 ,Etnomusikologi ,Aktif ,S1 ,12 ,2 ,http://forlap.dikti.go.id/prodi/detail/RjI2RjAzN0UtREJERC00RjI4LUI5QTEtNTRFNzAxNDlDMEVE/0
+95,48201 ,Farmasi ,Aktif ,S1 ,30 ,2 ,http://forlap.dikti.go.id/prodi/detail/OUQ1OUNGODEtRjMyMS00QURGLUI4RjQtNEEyMUU2RkMyQkM0/0
+96,45201 ,Fisika ,Aktif ,S1 ,15 ,325 ,http://forlap.dikti.go.id/prodi/detail/RUFFNTFEQjEtQjA2QS00NUIyLTgwRUItMjg4M0VFMkI0ODlG/0
+97,63201 ,Ilmu Administrasi Negara ,Aktif ,S1 ,18 ,625 ,http://forlap.dikti.go.id/prodi/detail/MjMyQzZBMUItNjI3QS00NDQ1LThFQjktOTgwODg5ODczRjRF/0
+98,63211 ,Ilmu Administrasi Niaga ,Aktif ,S1 ,2 ,3 ,http://forlap.dikti.go.id/prodi/detail/RTM5OUE1OUQtNTJEMi00MjAyLUIyQTUtNjIzNzk0RjYxMDI0/0
+99,41203 ,Ilmu dan Teknologi Pangan ,Aktif ,S1 ,12 ,287 ,http://forlap.dikti.go.id/prodi/detail/QjYxQjg1NzMtM0FCNy00NjBFLThCNUItOTM5NjlCOUVGMjFE/0
+100,74201 ,Ilmu Hukum ,Aktif ,S1 ,75 ,2 ,http://forlap.dikti.go.id/prodi/detail/MDg1Mjc3MDAtRTBFNS00QjA4LTg3MUYtNjFDREI3RjQxMjRF/0
+101,14201 ,Ilmu Keperawatan ,Aktif ,S1 ,28 ,538 ,http://forlap.dikti.go.id/prodi/detail/NDExNDc1NEUtNEVBQS00QzFBLTkyOUQtNTNGQTQ5OEE0MjI3/0
+102,72201 ,Ilmu Kesejahteraan Sosial ,Aktif ,S1 ,12 ,405 ,http://forlap.dikti.go.id/prodi/detail/RDgwRUQ5QzUtM0MxMi00MUI1LTgyRTEtMDMxNTQwOThDRDUy/0
+103,55201 ,Ilmu Komputer ,Aktif ,S1 ,9 ,604 ,http://forlap.dikti.go.id/prodi/detail/RTA0N0MyRTItRkM1OS00RUU3LUE2RjMtMDNCMzQwRTYyMjAy/0
+104,70201 ,Ilmu Komunikasi ,Aktif ,S1 ,22 ,2 ,http://forlap.dikti.go.id/prodi/detail/NDYxQUU0NUYtNjlEQS00MTVBLUE2M0MtQUMxMjU1MUIxODc5/0
+105,71201 ,Ilmu Perpustakaan ,Aktif ,S1 ,11 ,3 ,http://forlap.dikti.go.id/prodi/detail/MzAxRkI3NkItNjRBNy00QjAxLTlGMkYtM0VFODgyNEM2QjFE/0
+106,67201 ,Ilmu Politik ,Aktif ,S1 ,17 ,396 ,http://forlap.dikti.go.id/prodi/detail/RjlERjNEQ0UtMEMzRi00NjYwLTk0NDMtRUFENzg0QzdDMDZG/0
+107,80201 ,Ilmu Sejarah ,Aktif ,S1 ,17 ,2 ,http://forlap.dikti.go.id/prodi/detail/MDVCODMxMDMtMTMzNi00QTAxLTg2OTgtRTVCMDBBMjE0Q0RD/0
+108,54251 ,Kehutanan ,Aktif ,S1 ,39 ,3 ,http://forlap.dikti.go.id/prodi/detail/NjBDQkI3REEtRjJDNy00RjBELThDNkYtRTMxNjk1MjYzMDI4/0
+109,13201 ,Kesehatan Masyarakat ,Aktif ,S1 ,44 ,2.455 ,http://forlap.dikti.go.id/prodi/detail/NzdBMURBOUItQTJCQy00RjBDLTgyMzktMzVFRkVEQkFCMDdG/0
+110,41201 ,Keteknikan Pertanian ,Aktif ,S1 ,8 ,2 ,http://forlap.dikti.go.id/prodi/detail/RkVGODlFMEEtQzYzQy00QUE3LUExQjItQTNDQUMwQjgxMUZB/0
+111,47201 ,Kimia ,Aktif ,S1 ,20 ,347 ,http://forlap.dikti.go.id/prodi/detail/NDE5MEU2QjYtOTg0RS00QzAyLThBRUYtODZENjk1NzRGNTgx/0
+112,61201 ,Manajemen ,Aktif ,S1 ,38 ,1.072 ,http://forlap.dikti.go.id/prodi/detail/MDVDRjBEOEQtNTZDQS00NjI5LUJEQzEtNTU0QTc0MTU4QzU2/0
+113,54242 ,Manajemen Sumber Daya Perairan ,Aktif ,S1 ,6 ,2 ,http://forlap.dikti.go.id/prodi/detail/NkI5ODgxQzYtN0MzRS00RUMwLUIxMTgtOUI5Q0M0NkZCOTc2/0
+114,44201 ,Matematika ,Aktif ,S1 ,18 ,330 ,http://forlap.dikti.go.id/prodi/detail/RkE2Q0I2M0YtNDRGRi00RUUyLThGOUItQ0Y4RkVGQzM2NTE3/0
+115,11201 ,Pendidikan Dokter ,Aktif ,S1 ,292 ,865 ,http://forlap.dikti.go.id/prodi/detail/MzA5OTI1ODgtRDFDMi00NkUwLUIwRDktRTlFRkVGMDU2QkI1/0
+116,12201 ,Pendidikan Dokter Gigi ,Aktif ,S1 ,65 ,2 ,http://forlap.dikti.go.id/prodi/detail/MTM5RTFDNjAtMzMxRi00MjFGLTgzNjYtNUY2MDEyNTRFQzJG/0
+117,54231 ,Peternakan ,Aktif ,S1 ,8 ,303 ,http://forlap.dikti.go.id/prodi/detail/NDI1Njk4Q0ItNENENS00MTFGLThFOTctQkI2NzlFNDBFOTQw/0
+118,73201 ,Psikologi ,Aktif ,S1 ,39 ,559 ,http://forlap.dikti.go.id/prodi/detail/OThENzY2REEtRTRFRS00MzMyLThGQTQtMDFEMzY5OTU5ODFB/0
+119,79203 ,Sastra Arab ,Aktif ,S1 ,18 ,4 ,http://forlap.dikti.go.id/prodi/detail/RTdCRjU2NzYtQzYyNy00MzFDLThGQkItOUYxQzg0OUQxRTVG/0
+120,79211 ,Sastra Batak ,Aktif ,S1 ,8 ,3 ,http://forlap.dikti.go.id/prodi/detail/MTY4Q0E3NjgtRjY5OC00OEMwLUI1MUYtMTRENUNBRkM3M0E3/0
+121,79209 ,Sastra Cina ,Aktif ,S1 ,7 ,2 ,http://forlap.dikti.go.id/prodi/detail/N0FENzEwQjItMDNDMC00NTU3LTgzMzUtOTA3MkI2NjE2RDhF/0
+122,79201 ,Sastra Indonesia ,Aktif ,S1 ,23 ,3 ,http://forlap.dikti.go.id/prodi/detail/QjRBMjUxMDItMUMxMy00QjNELUFFRUUtRDFCOEQxMTk4QzdD/0
+123,79202 ,Sastra Inggris ,Aktif ,S1 ,21 ,2 ,http://forlap.dikti.go.id/prodi/detail/ODY0NzUwMTgtQjZERS00OEQ0LUJGNkYtRUIyRDgzNUI2Mjk2/0
+124,79204 ,Sastra Jepang ,Aktif ,S1 ,15 ,2 ,http://forlap.dikti.go.id/prodi/detail/QzQ1RTRDODctMjgxQi00MDRFLThDQjgtODBDRjg5QzZBQjhE/0
+125,79212 ,Sastra Melayu ,Aktif ,S1 ,9 ,2 ,http://forlap.dikti.go.id/prodi/detail/ODkzNTlDQjctNEQ0OS00MEE5LTgyODQtODY2N0UxRUQzRjYx/0
+126,69201 ,Sosiologi ,Aktif ,S1 ,18 ,2 ,http://forlap.dikti.go.id/prodi/detail/NThEQjJGMEItNjc4NS00Q0E3LTkyRTYtODk4MTQ2N0I3NjZF/0
+127,20201 ,Teknik Elektro ,Aktif ,S1 ,31 ,477 ,http://forlap.dikti.go.id/prodi/detail/NTQ0MjdCQzgtNEQwNS00RTMzLThBNTItMjk5OENBMEIzQUU1/0
+128,26201 ,Teknik Industri ,Aktif ,S1 ,18 ,2 ,http://forlap.dikti.go.id/prodi/detail/MDkyRjAxRjktQjc5NS00ODg3LUFEQTUtQ0NGM0FDRkVGQjQ2/0
+129,24201 ,Teknik Kimia ,Aktif ,S1 ,26 ,2 ,http://forlap.dikti.go.id/prodi/detail/QkVFODkyOTMtMUJFNS00ODc3LTkzRDEtNEQzODc5N0JFREUx/0
+130,25201 ,Teknik Lingkungan ,Aktif ,S1 ,2 ,2 ,http://forlap.dikti.go.id/prodi/detail/N0NGNjQ2M0EtMDAzQi00NUVFLTg2MkItNEFCQ0JBOURDQjRF/0
+131,21201 ,Teknik Mesin ,Aktif ,S1 ,14 ,2 ,http://forlap.dikti.go.id/prodi/detail/NUFBN0ZGQTYtOUM3NS00QzM5LThCQ0EtODQ3NDUzNUI1NjQy/0
+132,22201 ,Teknik Sipil ,Aktif ,S1 ,26 ,2 ,http://forlap.dikti.go.id/prodi/detail/QjM3MDg1N0UtQjE0MC00REMwLTkzMEYtMTFCRTNDRjg0NkIz/0
+133,59201 ,Teknologi Informasi ,Aktif ,S1 ,11 ,572 ,http://forlap.dikti.go.id/prodi/detail/NjQxMDVCQ0MtOTJERC00NkU3LUJBNUQtQUE5NzlEMEVBRkM2/0
+134,48901 ,Pendidikan Profesi Apoteker ,Aktif ,Profesi ,0 ,5 ,http://forlap.dikti.go.id/prodi/detail/REVENzM2NzktNUY5NC00RUM5LUE4RUEtMzJBQTU0RUIxNkU0/0
+135,62901 ,Profesi Akuntan ,Aktif ,Profesi ,0 ,5 ,http://forlap.dikti.go.id/prodi/detail/ODc5RkQ2NTMtMTM2Ri00RDNCLUFGOUMtMkE3REM0RDY3QkVF/0
+136,23901 ,Profesi Aristek ,Aktif ,Profesi ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/M0IxQ0JBMDctRDg0OS00QTJCLUI0QzUtNEVGQTA0QTU0RkZD/0
+137,11901 ,Profesi Dokter ,Aktif ,Profesi ,0 ,861 ,http://forlap.dikti.go.id/prodi/detail/MTkwOTU2N0ItNjJDRS00REIwLTgyNDAtMkUzRUY0N0YwOTFG/0
+138,12901 ,Profesi Dokter Gigi ,Aktif ,Profesi ,4 ,2 ,http://forlap.dikti.go.id/prodi/detail/OUEzMDdCMUQtOUVCNi00ODQ0LUFGRTAtQTk4MEFCMUZBODY3/0
+139,14901 ,Profesi Ners ,Aktif ,Profesi ,0 ,208 ,http://forlap.dikti.go.id/prodi/detail/RURDMERBQTgtNzY0Ni00RkExLUE4QjQtOEMwNTJGQTVEREM5/0
+140,15301 ,Bidan Pendidik ,Aktif ,D4 ,0 ,3 ,http://forlap.dikti.go.id/prodi/detail/MDdCMUQ1OUYtMDc3MS00MzJDLTgzQkQtMjQxMjk4NzdCNzgw/0
+141,14301 ,Perawat Pendidik ,Tutup ,D4 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/OTVFOUQ2MjItQjM5Ri00MEU5LTlFRTUtQkQwMkIyQzBCOTA3/0
+142,26302 ,Teknik Manajemen Pabrik ,Tutup ,D4 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/QkYzOEYyNEYtRDJCMy00MDJGLTlBOTgtNkQwMEI5NkRGQzg1/0
+143,20301 ,Teknologi Instrumentasi Pabrik ,Tutup ,D4 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/NkIwOTk2ODgtNEJDRS00RjE1LTg2RjEtMkM5NUVBOEU4NTcy/0
+144,24301 ,Teknologi Kimia Industri ,Tutup ,D4 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/RDJCNUMyQjAtRDUyMy00NDEzLUEwNDktQ0MzREU4RUI0MEJE/0
+145,26303 ,Teknologi Mekanik Industri ,Tutup ,D4 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/RUE2Mzg2Q0YtQjc4RC00MjQ3LUFBREItMjA3QkVENzcwNUFB/0
+146,62401 ,Akuntansi ,Aktif ,D3 ,5 ,396 ,http://forlap.dikti.go.id/prodi/detail/RTE0M0E2MzQtNUJFRC00MTVCLTkxNEMtOUNGMUE2QkUwMjA0/0
+147,48402 ,Analis Farmasi dan Makanan ,Aktif ,D3 ,2 ,147 ,http://forlap.dikti.go.id/prodi/detail/ODVFMTI1NjktQUFGOS00MzNCLTg0RDUtMERFQTNBRTVBMTYx/0
+148,24402 ,Analis Kimia ,Tutup ,D3 ,0 ,0 ,http://forlap.dikti.go.id/prodi/detail/RTgxNEQ5MjItQUU0Mi00ODVGLTk2NzMtMDY2MzRCMjQwRDFC/0
+149,79402 ,Bahasa Inggris ,Aktif ,D3 ,1 ,277 ,http://forlap.dikti.go.id/prodi/detail/OUQ1MTEyNzgtNzdGMi00N0E2LUJCNjctMzJGMkYyOTlDMUM4/0
+150,79404 ,Bahasa Jepang ,Aktif ,D3 ,0 ,4 ,http://forlap.dikti.go.id/prodi/detail/RTkyM0JBMTItMjEyMS00MEQ0LTgwNTMtNEFFRUMzNDcwRUQz/0
+151,30401 ,Fisika ,Aktif ,D3 ,7 ,189 ,http://forlap.dikti.go.id/prodi/detail/N0FFMEUxQ0ItMDBDOS00RTRELUI1RjQtOEQ5MDYyQ0M5REVG/0
+152,14401 ,Keperawatan ,Aktif ,D3 ,0 ,1 ,http://forlap.dikti.go.id/prodi/detail/RDM5MTQ2MkItN0RFNC00RUI3LThCQjItQUU0OTE5NjQ0RjhB/0
+153,63412 ,Kesekretariatan ,Aktif ,D3 ,0 ,305 ,http://forlap.dikti.go.id/prodi/detail/RjFCQzREMEItRDdDOC00MDVFLTlGQzAtNTUxQUY0QzUxRjhE/0
+154,61406 ,Keuangan ,Aktif ,D3 ,0 ,428 ,http://forlap.dikti.go.id/prodi/detail/Rjg1MUQxMDgtOUI5RS00Mjc2LTlGQTctMjM1MjRCMTU1NkMw/0
+155,47401 ,Kimia ,Aktif ,D3 ,9 ,493 ,http://forlap.dikti.go.id/prodi/detail/ODFBQTZFQjAtNDBBMi00NTkxLTkyMTAtMUUzNEJBQ0I2N0Yx/0
+156,20404 ,Metrologi Dan Instrumetasi ,Aktif ,D3 ,5 ,243 ,http://forlap.dikti.go.id/prodi/detail/NEE3N0EyREItQTA3My00RUFBLUFFMjItMkFGQjUwRTA0MEI2/0
+157,93403 ,Pariwisata ,Aktif ,D3 ,11 ,3 ,http://forlap.dikti.go.id/prodi/detail/QTVCQkNCOTctMDE5My00ODdBLUJFRDAtQkJENTRGQTMwNTI5/0
+158,62402 ,Perpajakan ,Aktif ,D3 ,1 ,409 ,http://forlap.dikti.go.id/prodi/detail/MUU0NEY3QTYtREI2Qi00NTYxLThBNzgtN0Y4QUFBMzg4Q0Q5/0
+159,71401 ,Perpustakaan ,Aktif ,D3 ,1 ,3 ,http://forlap.dikti.go.id/prodi/detail/RjI0N0Q5QTctOEVFMi00NkFCLUE5NzktNURBOEU1NjBCQzQ1/0
+160,49401 ,Statistika ,Aktif ,D3 ,6 ,2 ,http://forlap.dikti.go.id/prodi/detail/MTVFN0E3NkYtMzA0NS00NTA1LUI5QzQtQjdBQ0IyNzkyQjE1/0
+161,55401 ,Teknik Informatika ,Aktif ,D3 ,6 ,2 ,http://forlap.dikti.go.id/prodi/detail/MzgwQzk3RUMtRDMwMi00OEI1LTg5MjUtM0JDNUQxREQzRDlF/0
