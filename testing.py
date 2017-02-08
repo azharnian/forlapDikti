@@ -18,7 +18,7 @@ class info(object):
         host = '127.0.0.1',
         user = 'root', #like root
         passwd = '310116', #password
-        db = 'tes', #name of database that you used
+        db = 'diktiScraperdb', #name of database that you used
     )
     cur = db.cursor() #connect to db as instruction
 
@@ -198,12 +198,18 @@ class info(object):
         return tempList
     
     def prodi(self, tempCPoint, tempDfProdi):
-        tempI = tempCPoint[0]; tempIStart = tempCPoint[1]; tempIFinish = tempCPoint[2]
+    	print tempCPoint
+    	#sys.exit('System STOPPED')
+        tempI = tempCPoint[0]; tempIStart = 1; tempIFinish = 1
         tempJ = tempCPoint[3]; tempJStrat = tempCPoint[4]; tempJFInish = tempCPoint[5]
         tempCurrentTime = tempCPoint[6]
         tempJ = tempCPoint[3]; tempJStart = 0; tempJFinish = 0
         tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
         tempCurrentTime = int(tempCurrentTime)
+        print tempCPoint
+        if tempI == 51:
+        	print str(tempI)+" "+str(tempIStart)+" "+str(tempIFinish)
+        	sys.exit('System STOPPED')
         self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
         for link in tempDfProdi['link'][tempJ:]:
             tempJStart = 1; tempJFinish = 0
@@ -259,7 +265,8 @@ class info(object):
                 tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
                 tempCurrentTime = int(tempCurrentTime)
                 self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
-                tempCPoint = self.read_checkPoint()
+                #tempCPoint = self.read_checkPoint()
+                print "Prodi already exists"
                 #tempDfProdi = pandas.read_csv('dfProdi.csv')
                 #self.prodi(tempCPoint, tempDfProdi)
         tempJ = 0; tempStartJ = 0; tempFinishJ = 0
@@ -274,9 +281,13 @@ class info(object):
         tempCurrentTime = tempCPoint[6]
         tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
         tempCurrentTime = int(tempCurrentTime)
+        print tempCPoint
         self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
         for university in tempDfUniv['univ'][tempI:]:
             print tempI
+            tempCPoint[0] = tempI
+            print tempCPoint
+            self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
             print university
             urlUniv = ''
             if self.isExistsUrl(university) == 0:
@@ -285,7 +296,7 @@ class info(object):
             else:
                 print "> Link for this University is Already Exists"
                 urlUniv = tempDfUniv['link'][tempI]
-            print "URL : "+urlUniv
+            print "URL : "+ str(urlUniv)
             if (urlUniv <> False) and (urlUniv <> "link not exists") and (urlUniv <> None) :
                 tempStartI = 1
                 tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
@@ -376,7 +387,10 @@ class info(object):
                     tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
                     tempCurrentTime = int(tempCurrentTime)
                     print "> Finding Information of University Done"
+                    #tempI = tempI + 1
                     self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+                    print tempCPoint
+                    #sys.exit('System STOPPED')
                     self.prodi(tempCPoint, tempDfProdi)
                 else:
                     print university + "> has no valid data"
@@ -386,6 +400,7 @@ class info(object):
                     tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
                     tempCurrentTime = int(tempCurrentTime)
                     print "> Finding Information of University Done"
+                    #tempI = tempI + 1
                     self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
             else :
                 print university + "> has no link in google"
@@ -398,6 +413,7 @@ class info(object):
                 tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
                 tempCurrentTime = int(tempCurrentTime)
                 print "> Finding Information of University Done"
+                #tempI = tempI + 1
                 self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
             tempI = tempI + 1
             tempIStart = 1; tempIFinish = 1
@@ -411,7 +427,7 @@ class info(object):
         return True
 
 getInfo = info('getInfo') # make an object for class info
-getInfo.exe_SQL('USE tes')
+getInfo.exe_SQL('USE diktiScraperdb')
 dfUniv = getInfo.exe_SQLToDf('SELECT Id, univ, link FROM indexUniv')
 cPoint = getInfo.read_checkPoint() #reading saving
 pointUniv = cPoint[0]; pointStartUniv = cPoint[1]; pointFinishUniv = cPoint[2]; pointProdi = cPoint[3]; pointStartProdi = cPoint[4]; pointFinishProdi = cPoint[5]
@@ -437,4 +453,8 @@ else:
         else:
             print "> Finding Information of Prodi Start From %s" % str(pointProdi)
         getInfo.prodi(cPoint, dfProdi)
+        cPoint = getInfo.read_checkPoint() #reading saving
+        cPoint[0] = cPoint[0]+1; cPoint[1] = 0; cPoint[2] = 0; cPoint[3] = 0; cPoint[4] = 0; cPoint[5] = 0;
+        print cPoint
+        getInfo.write_checkPoint(cPoint[0], cPoint[1], cPoint[2], cPoint[3], cPoint[4], cPoint[5], cPoint[6]) #saving
         getInfo.univ(cPoint, dfUniv)
