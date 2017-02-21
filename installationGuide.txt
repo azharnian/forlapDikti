@@ -1,4 +1,4 @@
 1. Install mysql, anaconda, python2.7
 2. Install sudo apt-get install python-pip python-dev libmysqlclient-dev , pip install MySQL-python
 3. make db diktiScraperdb
-3. type export PATH=~/anaconda2/bin/:$PATH
+4. type export PATH=~/anaconda2/bin/:$PATH

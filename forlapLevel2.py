@@ -107,24 +107,53 @@ class info(object):
     def urlForlapInGoogle(self, tempUniv):
         result = ''
         try:
-            wt = random.uniform(10, 20)
-            tempUniv = re.sub("[ ]", '+', tempUniv)
-            research_later = '"'+tempUniv+'"+site:http://forlap.dikti.go.id/perguruantinggi/detail/'
-            goog_search = "https://www.google.co.uk/search?sclient=psy-ab&client=ubuntu&hs=k5b&channel=fs&biw=1366&bih=648&noj=1&q=" + research_later
-            r = requests.get(goog_search)
-            time.sleep(wt)
-            scrapeGoogle = BeautifulSoup(r.text, "html.parser")
-            tempList = []
-            for item in scrapeGoogle.findAll('a', href=True):
-                item = str(item['href'])
-                if len(item) > 104:
-                    tempList.append(item[7:104])
+            counter = int(random.uniform(2, 10))
+            if counter % 5 == 0:
+                domain = '.co.id'
+            elif counter % 4 == 0:
+                domain = '.com'
+            elif counter % 3 == 0:
+                domain = '.co.uk'
+            else :
+                domain = '.co.id'
+            for count in range (1, counter):
+                if count <> (counter-1):
+                    web = 'http://localhost/googleBlock/fake.html'
+                    r = requests.get(web)
+                    scrape = BeautifulSoup(r.text, "html.parser")
+                    fake = str(scrape)
+                    initCount = long(random.uniform(0,553600))
+                    fake = fake[initCount:(initCount+10)]
+                    fake  = re.sub("[!@#$/'<>,:_;=.`%*-?&^ ]", '', fake)
+                    #print '> Camuflase = ' + fake
+                    goog_search = "https://www.google"+domain+"/search?sclient=psy-ab&client=ubuntu&hs=k5b&channel=fs&biw=1366&bih=648&noj=1&q=" + fake
+                    r = requests.get(goog_search)
+                    time.sleep(int(random.uniform(2, 5)))
+                    scrape = BeautifulSoup(r.text, "html.parser")
+                else:
+                    tempUniv = re.sub("[ ]", '+', tempUniv)
+                    research_later = '"'+tempUniv+'"+site:http://forlap.dikti.go.id/perguruantinggi/detail/'
+                    goog_search = "https://www.google"+domain+"/search?sclient=psy-ab&client=ubuntu&hs=k5b&channel=fs&biw=1366&bih=648&noj=1&q=" + research_later
+                    r = requests.get(goog_search)
+                    time.sleep(int(random.uniform(2, 5)))
+                    scrapeGoogle = BeautifulSoup(r.text, "html.parser")
+                    googleBlock = scrapeGoogle.find("div", {"id" : "infoDiv"})
+                    googleBlock = str(googleBlock)
+                    print googleBlock[139:145]
+                    if googleBlock[139:145] == "Google":
+                        sys.exit('Block by Google')
+                    tempList = []
+                    for item in scrapeGoogle.findAll('a', href=True):
+                        item = str(item['href'])
+                        if len(item) > 104:
+                            tempList.append(item[7:104])
 
-            tempTempList = []
-            for item in tempList:
-                if item[0:49] == "http://forlap.dikti.go.id/perguruantinggi/detail/":
-                    tempTempList.append(item)
-            result = tempTempList[0]
+                    tempTempList = []
+                    for item in tempList:
+                        if item[0:49] == "http://forlap.dikti.go.id/perguruantinggi/detail/":
+                            tempTempList.append(item)
+                    result = tempTempList[0]
+                    print result
             return result
         except Exception as e:
             print e.message
@@ -218,13 +247,13 @@ class info(object):
             self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
             if self.check_dbInfoProdi(tempDfProdi['kode'][tempJ], str(tempI+1), str(tempJ+1)) == 0:
                 print ">"+link
-                kode = str(tempDfProdi['kode'][tempJ])
-                prodi = str(tempDfProdi['prodi'][tempJ])
-                status = str(tempDfProdi['status'][tempJ])
-                jenjang = str(tempDfProdi['jenjang'][tempJ])
-                dosenTetap = str(tempDfProdi['dosenTetap'][tempJ])
-                mahasiswa = str(tempDfProdi['mahasiswa'][tempJ])
-                urlProdi = str(link)
+                kode = str(tempDfProdi['kode'][tempJ]); kode = kode.encode('utf-8')
+                prodi = str(tempDfProdi['prodi'][tempJ]); prodi = prodi.encode('utf-8')
+                status = str(tempDfProdi['status'][tempJ]); status = status.encode('utf-8')
+                jenjang = str(tempDfProdi['jenjang'][tempJ]); jenjang = jenjang.encode('utf-8')
+                dosenTetap = str(tempDfProdi['dosenTetap'][tempJ]); dosenTetap = dosenTetap.encode('utf-8')
+                mahasiswa = str(tempDfProdi['mahasiswa'][tempJ]); mahasiswa = mahasiswa.encode('utf-8')
+                urlProdi = str(link); urlProdi = urlProdi.encode('utf-8')
                 scrapeProdi = BeautifulSoup(urllib.urlopen(urlProdi), "html.parser")
                 listInfoProd = []
                 listDosen = []
@@ -269,6 +298,17 @@ class info(object):
                 print "Prodi already exists"
                 #tempDfProdi = pandas.read_csv('dfProdi.csv')
                 #self.prodi(tempCPoint, tempDfProdi)
+        tempDataProdi = {
+            'kode' : [],
+            'prodi' : [],
+            'status' : [],
+            'jenjang' : [],
+            'dosenTetap' : [],
+            'mahasiswa' : [],
+            'link' : [],
+        }
+        tempDfProdi = pandas.DataFrame(tempDataProdi, columns=['kode', 'prodi', 'status', 'jenjang', 'dosenTetap', 'mahasiswa', 'link'])
+        tempDfProdi.to_csv('dfProdi.csv')
         tempJ = 0; tempStartJ = 0; tempFinishJ = 0
         tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
         tempCurrentTime = int(tempCurrentTime)
@@ -276,7 +316,7 @@ class info(object):
         return True
         
     def univ(self, tempCPoint, tempDfUniv):
-        tempI = tempCPoint[0]; tempIStart = tempCPoint[1]; tempIFinish = tempCPoint[2]
+        tempI = tempCPoint[0]; tempIStart = 0; tempIFinish = 0
         tempJ = 0; tempJStart = 0; tempJFinish = 0
         tempCurrentTime = tempCPoint[6]
         tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
@@ -315,18 +355,18 @@ class info(object):
                         if count % 3 == 0:
                             listIdUniv.append(record2.text)
                         count = count +1
-                status = str(listIdUniv[0]); status = re.sub("[!@#$/']", '', status)
-                universitas = str(listIdUniv[1]); universitas = re.sub("[!@#$/']", '', universitas)
-                berdiri = str(listIdUniv[2]); berdiri = re.sub("[!@#$/']", '', berdiri)
-                noSK = str(listIdUniv[3]); noSK = re.sub("[!@#$/']", '', noSK)
-                tanggalSK = str(listIdUniv[4]); tanggalSK = re.sub("[!@#$/']", '', tanggalSK)
-                alamat = str(listIdUniv[5]); alamat = re.sub("[!@#$/']", '', alamat)
-                kotakab = str(listIdUniv[6]); kotakab = re.sub("[!@#$/']", '', kotakab)
-                kodePos = str(listIdUniv[7]); kodePos = re.sub("[!@#$/']", '', kodePos)
-                telepon = str(listIdUniv[8]); telepon = re.sub("[!@#$/']", '', telepon)
-                fax = str(listIdUniv[9]); fax = re.sub("[!@#$/']", '', fax)
-                email = str(listIdUniv[10]); email = re.sub("[!#$/']", '', email)
-                website = str(listIdUniv[11]); website = re.sub("[!@#$/']", '', website)
+                status = listIdUniv[0].encode('utf-8'); status = re.sub("[!@#$/']", '', status)
+                universitas = listIdUniv[1].encode('utf-8'); universitas = re.sub("[!@#$/']", '', universitas)
+                berdiri = listIdUniv[2].encode('utf-8'); berdiri = re.sub("[!@#$/']", '', berdiri)
+                noSK = listIdUniv[3].encode('utf-8'); noSK = re.sub("[!@#$/']", '', noSK)
+                tanggalSK = listIdUniv[4].encode('utf-8'); tanggalSK = re.sub("[!@#$/']", '', tanggalSK)
+                alamat = listIdUniv[5].encode('utf-8'); alamat = re.sub("[!@#$/']", '', alamat); alamat = re.sub('[!@#$/"]', '', alamat)
+                kotakab = listIdUniv[6].encode('utf-8'); kotakab = re.sub("[!@#$/']", '', kotakab)
+                kodePos = listIdUniv[7].encode('utf-8'); kodePos = re.sub("[!@#$/']", '', kodePos)
+                telepon = listIdUniv[8].encode('utf-8'); telepon = re.sub("[!@#$/']", '', telepon)
+                fax = listIdUniv[9].encode('utf-8'); fax = re.sub("[!@#$/']", '', fax)
+                email = listIdUniv[10].encode('utf-8'); email = re.sub("[!#$/']", '', email)
+                website = listIdUniv[11].encode('utf-8'); website = re.sub("[!@#$/']", '', website)
                 if universitas + ' ' == university:
                     print university + "> valid as webpage"
                     tempQuery = 'UPDATE indexUniv SET valid = "Y" WHERE Id = '+str(tempI+1)+' ;'
@@ -366,24 +406,28 @@ class info(object):
                             tempListLinkProdi.append(record2['href'])
                     count = 1
                     for item in tempListProdi :
+                        item = re.sub("[!@#$'/`]", '', item)
+                        item = ''.join([i if ord(i) < 128 else ' ' for i in item])
+                        item = item.encode('utf-8')
                         if count % 6 == 1:
-                            tempDataProdi['kode'].append(str(item))
+                            tempDataProdi['kode'].append(item)
                         elif count % 6 == 2 :
-                            tempDataProdi['prodi'].append(str(item))
+                            tempDataProdi['prodi'].append(item)
                         elif count % 6 == 3 :
-                            tempDataProdi['status'].append(str(item))
+                            tempDataProdi['status'].append(item)
                         elif count % 6 == 4 :
-                            tempDataProdi['jenjang'].append(str(item))
+                            tempDataProdi['jenjang'].append(item)
                         elif count % 6 == 5 :
-                            tempDataProdi['dosenTetap'].append(str(item))
+                            tempDataProdi['dosenTetap'].append(item)
                         elif count % 6 == 0 :
-                            tempDataProdi['mahasiswa'].append(str(item))
-                            tempDataProdi['link'].append(str(tempListLinkProdi[(count/6)-1]))
+                            tempDataProdi['mahasiswa'].append(item)
+                            item1 = tempListLinkProdi[(count/6)-1].encode('utf-8')
+                            tempDataProdi['link'].append(item1)
                         count = count+1
                     tempDfProdi = pandas.DataFrame(tempDataProdi, columns=['kode', 'prodi', 'status', 'jenjang', 'dosenTetap', 'mahasiswa', 'link'])
                     tempDfProdi.to_csv('dfProdi.csv')
                     tempDfProdi = pandas.read_csv('dfProdi.csv')
-                    tempIFinish = 1
+                    #tempIFinish = 1
                     tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
                     tempCurrentTime = int(tempCurrentTime)
                     print "> Finding Information of University Done"
@@ -394,9 +438,10 @@ class info(object):
                     self.prodi(tempCPoint, tempDfProdi)
                 else:
                     print university + "> has no valid data"
+                    #sys.exit('Line 437')
                     tempQuery = 'UPDATE indexUniv SET valid = "N" WHERE Id = '+str(tempI+1)+' ;'
                     self.write_dataSQL(tempQuery)
-                    tempIStart = 1; tempIFinish = 1
+                    tempIStart = 1#; tempIFinish = 1
                     tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
                     tempCurrentTime = int(tempCurrentTime)
                     print "> Finding Information of University Done"
@@ -404,22 +449,24 @@ class info(object):
                     self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
             else :
                 print university + "> has no link in google"
+                #sys.exit('Line 448')
                 tempQuery = 'UPDATE indexUniv SET link =  "link not exists" WHERE Id ='+str(tempI+1)+' ;'
                 self.write_dataSQL(tempQuery)
                 print university + "> has no valid data"
                 tempQuery = 'UPDATE indexUniv SET valid = "N" WHERE Id = '+str(tempI+1)+' ;'
                 self.write_dataSQL(tempQuery)
-                tempIStart = 1; tempIFinish = 1
+                tempIStart = 1#; tempIFinish = 1
                 tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
                 tempCurrentTime = int(tempCurrentTime)
                 print "> Finding Information of University Done"
                 #tempI = tempI + 1
                 self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
-            tempI = tempI + 1
             tempIStart = 1; tempIFinish = 1
             tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
             tempCurrentTime = int(tempCurrentTime)
             self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+            tempI = tempI + 1
+            tempIStart = 0; tempIFinish = 0
         tempIStart = 1; tempIFinish = 1
         tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
         tempCurrentTime = int(tempCurrentTime)
