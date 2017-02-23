@@ -109,11 +109,11 @@ class info(object):
         try:
             counter = int(random.uniform(2, 10))
             if counter % 5 == 0:
-                domain = '.co.id'
-            elif counter % 4 == 0:
                 domain = '.com'
+            elif counter % 4 == 0:
+                domain = '.co.id'
             elif counter % 3 == 0:
-                domain = '.co.uk'
+                domain = '.com'
             else :
                 domain = '.co.id'
             for count in range (1, counter):
@@ -324,6 +324,7 @@ class info(object):
         print tempCPoint
         self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
         for university in tempDfUniv['univ'][tempI:]:
+            university = re.sub('[!@#$/"]', '', university)
             print tempI
             tempCPoint[0] = tempI
             print tempCPoint
@@ -356,7 +357,7 @@ class info(object):
                             listIdUniv.append(record2.text)
                         count = count +1
                 status = listIdUniv[0].encode('utf-8'); status = re.sub("[!@#$/']", '', status)
-                universitas = listIdUniv[1].encode('utf-8'); universitas = re.sub("[!@#$/']", '', universitas)
+                universitas = listIdUniv[1].encode('utf-8'); universitas = re.sub("[!@#$/']", '', universitas); universitas = re.sub('[!@#$/"]', '', universitas)
                 berdiri = listIdUniv[2].encode('utf-8'); berdiri = re.sub("[!@#$/']", '', berdiri)
                 noSK = listIdUniv[3].encode('utf-8'); noSK = re.sub("[!@#$/']", '', noSK)
                 tanggalSK = listIdUniv[4].encode('utf-8'); tanggalSK = re.sub("[!@#$/']", '', tanggalSK)
@@ -367,7 +368,17 @@ class info(object):
                 fax = listIdUniv[9].encode('utf-8'); fax = re.sub("[!@#$/']", '', fax)
                 email = listIdUniv[10].encode('utf-8'); email = re.sub("[!#$/']", '', email)
                 website = listIdUniv[11].encode('utf-8'); website = re.sub("[!@#$/']", '', website)
-                if universitas + ' ' == university:
+                tempWord = ""
+                tempWord1 = universitas.split()
+                for item in tempWord1:
+                    tempWord = tempWord + item + " "
+                universitas = tempWord
+                tempWord = ""
+                tempWord1 = university.split()
+                for item in tempWord1:
+                    tempWord = tempWord + item + " "
+                university = tempWord
+                if (universitas == university):
                     print university + "> valid as webpage"
                     tempQuery = 'UPDATE indexUniv SET valid = "Y" WHERE Id = '+str(tempI+1)+' ;'
                     self.write_dataSQL(tempQuery)
