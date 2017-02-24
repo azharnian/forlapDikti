@@ -13,6 +13,19 @@ import sys
 class info(object):
     name = ''
     startTime = time.time()
+    tempListTime = []
+    with open('checkPoint.txt') as tempOpenFile:
+        y = 0
+        for item in tempOpenFile:
+            print item
+            if y == 6:
+                tempListTime.append(float(item))
+            else:
+                tempListTime.append(int(item))
+            y = y+1
+    saveTime  = tempListTime[6]
+    tempTempList = []
+    
     
     db = MySQLdb.connect(
         host = '127.0.0.1',
@@ -165,17 +178,25 @@ class info(object):
             fileCheckPoint = 'checkPoint.txt'
             tempList = []
             with open(fileCheckPoint) as tempOpenFile:
+                y = 0
                 for item in tempOpenFile:
-                    tempList.append(int(item))
-                    print int(item)
+                    print item
+                    if y == 6:
+                        tempList.append(float(item))
+                    else:
+                        tempList.append(int(item))
+                    y = y+1
             return tempList
         except IOError:
             print 'Reading Data Failed'
             sys.exit('Stopped by System')
         
-    def write_checkPoint(self, tempPointUniv, tempPointStartUniv, tempPointFinishUniv, tempPointProdi, tempPointStartProdi, tempPointFinishProdi, tempCurrentTime):
+    def write_checkPoint(self, tempPointUniv, tempPointStartUniv, tempPointFinishUniv, tempPointProdi, tempPointStartProdi, tempPointFinishProdi):
         try:
             tempOpenFile = open('checkPoint.txt', 'w')
+            tempCurrentTime = time.time() - self.startTime
+            tempCurrentTime = self.saveTime + tempCurrentTime
+            print tempCurrentTime
             tempOpenFile.write(str(tempPointUniv)+"\n"+str(tempPointStartUniv)+"\n"+str(tempPointFinishUniv)+"\n"+str(tempPointProdi)+"\n"+str(tempPointStartProdi)+"\n"+str(tempPointFinishProdi)+"\n"+str(tempCurrentTime))
             print "> data check point saved"
             return True
@@ -195,21 +216,21 @@ class info(object):
         
     def check_dbInfoUniv(self, tempIdUniv):
         tempIdUniv = str(tempIdUniv)
-        tempQuery = 'SELECT EXISTS(SELECT * FROM infoUniv WHERE idUniv LIKE "%'+tempIdUniv+'%")'
+        tempQuery = 'SELECT EXISTS(SELECT * FROM infoUniv WHERE idUniv LIKE "'+tempIdUniv+'")'
         if self.exe_SQLFind(tempQuery) == '1':
             return 1
         else:
             return 0
     
     def check_urlUniv(self, tempLinkUniv):
-        tempQuery = 'SELECT EXISTS(SELECT * FROM indexUniv WHERE link LIKE "%'+tempLinkUniv+'%")'
+        tempQuery = 'SELECT EXISTS(SELECT * FROM indexUniv WHERE link LIKE "'+tempLinkUniv+'")'
         if self.exe_SQLFind(tempQuery) == '1':
             return 1
         else:
             return 0
     
     def isExistsUrl(self, tempUniv):
-        tempQuery = 'SELECT EXISTS(SELECT * FROM indexUniv WHERE univ LIKE "%'+tempUniv+'%" AND (link NOT LIKE "%link not exists%" AND link IS NOT NULL))'
+        tempQuery = 'SELECT EXISTS(SELECT * FROM indexUniv WHERE univ LIKE "'+tempUniv+'" AND (link NOT LIKE "%link not exists%" AND link IS NOT NULL))'
         if self.exe_SQLFind(tempQuery) == '1':
             return 1
         else:
@@ -230,21 +251,15 @@ class info(object):
     	print tempCPoint
     	#sys.exit('System STOPPED')
         tempI = tempCPoint[0]; tempIStart = 1; tempIFinish = 1
-        tempJ = tempCPoint[3]; tempJStrat = tempCPoint[4]; tempJFInish = tempCPoint[5]
-        tempCurrentTime = tempCPoint[6]
-        tempJ = tempCPoint[3]; tempJStart = 0; tempJFinish = 0
-        tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-        tempCurrentTime = int(tempCurrentTime)
+        tempJ = tempCPoint[3]; tempJStart = tempCPoint[4]; tempJFinish = tempCPoint[5]
         print tempCPoint
         #if tempI == 51:
         #	print str(tempI)+" "+str(tempIStart)+" "+str(tempIFinish)
         #	sys.exit('System STOPPED')
-        self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+        self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
         for link in tempDfProdi['link'][tempJ:]:
             tempJStart = 1; tempJFinish = 0
-            tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-            tempCurrentTime = int(tempCurrentTime)
-            self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+            self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
             if self.check_dbInfoProdi(tempDfProdi['kode'][tempJ], str(tempI+1), str(tempJ+1)) == 0:
                 print ">"+link
                 kode = str(tempDfProdi['kode'][tempJ]); kode = kode.encode('utf-8')
@@ -286,14 +301,10 @@ class info(object):
                 self.write_dataSQL(query)
                 print '>'+str(tempI+1)+'|'+str(tempJ+1)+'|'+kode+'|'+status+'|'+prodi+'|'+jenjang+'|dosen='+dosenTetap+'|s2='+dosenS2+'|s3='+dosenS3+'|Mhs='+mahasiswa+'|'
                 tempJ = tempJ + 1; tempFinishJ = 1
-                tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-                tempCurrentTime = int(tempCurrentTime)
-                self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+                self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
             else:
                 tempJ = tempJ+1; tempJStart = 1; tempJFinish = 1
-                tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-                tempCurrentTime = int(tempCurrentTime)
-                self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+                self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
                 #tempCPoint = self.read_checkPoint()
                 print "Prodi already exists"
                 #tempDfProdi = pandas.read_csv('dfProdi.csv')
@@ -310,25 +321,20 @@ class info(object):
         tempDfProdi = pandas.DataFrame(tempDataProdi, columns=['kode', 'prodi', 'status', 'jenjang', 'dosenTetap', 'mahasiswa', 'link'])
         tempDfProdi.to_csv('dfProdi.csv')
         tempJ = 0; tempStartJ = 0; tempFinishJ = 0
-        tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-        tempCurrentTime = int(tempCurrentTime)
-        self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+        self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
         return True
         
     def univ(self, tempCPoint, tempDfUniv):
         tempI = tempCPoint[0]; tempIStart = 0; tempIFinish = 0
         tempJ = 0; tempJStart = 0; tempJFinish = 0
-        tempCurrentTime = tempCPoint[6]
-        tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-        tempCurrentTime = int(tempCurrentTime)
         print tempCPoint
-        self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+        self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
         for university in tempDfUniv['univ'][tempI:]:
             university = re.sub('[!@#$/"]', '', university)
             print tempI
             tempCPoint[0] = tempI
             print tempCPoint
-            self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+            self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
             print university
             urlUniv = ''
             if self.isExistsUrl(university) == 0:
@@ -338,11 +344,9 @@ class info(object):
                 print "> Link for this University is Already Exists"
                 urlUniv = tempDfUniv['link'][tempI]
             print "URL : "+ str(urlUniv)
-            if (urlUniv <> False) and (urlUniv <> "link not exists") and (urlUniv <> None) :
+            if (urlUniv <> False) and (urlUniv <> None) : # and (urlUniv <> "link not exists") 
                 tempStartI = 1
-                tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-                tempCurrentTime = int(tempCurrentTime)
-                self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+                self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
                 if self.check_urlUniv(urlUniv) == 0:
                     tempQuery = 'UPDATE indexUniv SET link = "'+urlUniv+'" WHERE Id = '+str(tempI+1)+' ;'
                     self.write_dataSQL(tempQuery)
@@ -438,12 +442,9 @@ class info(object):
                     tempDfProdi = pandas.DataFrame(tempDataProdi, columns=['kode', 'prodi', 'status', 'jenjang', 'dosenTetap', 'mahasiswa', 'link'])
                     tempDfProdi.to_csv('dfProdi.csv')
                     tempDfProdi = pandas.read_csv('dfProdi.csv')
-                    #tempIFinish = 1
-                    tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-                    tempCurrentTime = int(tempCurrentTime)
                     print "> Finding Information of University Done"
                     #tempI = tempI + 1
-                    self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+                    self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
                     print tempCPoint
                     #sys.exit('System STOPPED')
                     self.prodi(tempCPoint, tempDfProdi)
@@ -452,12 +453,10 @@ class info(object):
                     #sys.exit('Line 437')
                     tempQuery = 'UPDATE indexUniv SET valid = "N" WHERE Id = '+str(tempI+1)+' ;'
                     self.write_dataSQL(tempQuery)
-                    tempIStart = 1#; tempIFinish = 1
-                    tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-                    tempCurrentTime = int(tempCurrentTime)
+                    tempIStart = 1
                     print "> Finding Information of University Done"
                     #tempI = tempI + 1
-                    self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+                    self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
             else :
                 print university + "> has no link in google"
                 #sys.exit('Line 448')
@@ -466,22 +465,16 @@ class info(object):
                 print university + "> has no valid data"
                 tempQuery = 'UPDATE indexUniv SET valid = "N" WHERE Id = '+str(tempI+1)+' ;'
                 self.write_dataSQL(tempQuery)
-                tempIStart = 1#; tempIFinish = 1
-                tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-                tempCurrentTime = int(tempCurrentTime)
+                tempIStart = 1
                 print "> Finding Information of University Done"
                 #tempI = tempI + 1
-                self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+                self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
             tempIStart = 1; tempIFinish = 1
-            tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-            tempCurrentTime = int(tempCurrentTime)
-            self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+            self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
             tempI = tempI + 1
             tempIStart = 0; tempIFinish = 0
         tempIStart = 1; tempIFinish = 1
-        tempCurrentTime = tempCurrentTime + (time.time() - self.startTime)
-        tempCurrentTime = int(tempCurrentTime)
-        self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish, tempCurrentTime) #saving
+        self.write_checkPoint(tempI, tempIStart, tempIFinish, tempJ, tempJStart, tempJFinish) #saving
         return True
 
 getInfo = info('getInfo') # make an object for class info
@@ -489,7 +482,6 @@ getInfo.exe_SQL('USE diktiScraperdb')
 dfUniv = getInfo.exe_SQLToDf('SELECT Id, univ, link FROM indexUniv')
 cPoint = getInfo.read_checkPoint() #reading saving
 pointUniv = cPoint[0]; pointStartUniv = cPoint[1]; pointFinishUniv = cPoint[2]; pointProdi = cPoint[3]; pointStartProdi = cPoint[4]; pointFinishProdi = cPoint[5]
-currentTime = cPoint[6]
 if pointUniv == 0:
     print "> Finding From Beginning"
     query = "DROP TABLE IF EXISTS infoUniv;"; getInfo.exe_SQL(query)
@@ -514,5 +506,5 @@ else:
         cPoint = getInfo.read_checkPoint() #reading saving
         cPoint[0] = cPoint[0]+1; cPoint[1] = 0; cPoint[2] = 0; cPoint[3] = 0; cPoint[4] = 0; cPoint[5] = 0;
         print cPoint
-        getInfo.write_checkPoint(cPoint[0], cPoint[1], cPoint[2], cPoint[3], cPoint[4], cPoint[5], cPoint[6]) #saving
+        getInfo.write_checkPoint(cPoint[0], cPoint[1], cPoint[2], cPoint[3], cPoint[4], cPoint[5]) #saving
         getInfo.univ(cPoint, dfUniv)
