@@ -166,7 +166,7 @@ class info(object):
                         if item[0:49] == "http://forlap.dikti.go.id/perguruantinggi/detail/":
                             tempTempList.append(item)
                     result = tempTempList[0]
-                    print result
+                    #print result
             return result
         except Exception as e:
             print e.message
@@ -378,20 +378,24 @@ class info(object):
                     tempWord = tempWord + item + " "
                 universitas = tempWord
                 tempWord1 = university.split()
-                if tempWord1[1] + ' '+ tempWord1[2] == 'Islam Negeri':
+                if (len(tempWord1) > 2) and (tempWord1[1] + ' '+ tempWord1[2] == 'Islam Negeri'):
                     x = 0
-                    tempWord = 'IAIN'
+                    tempWord = 'IAIN '
                     for item in tempWord1:
                         if x > 2 :
-                            tempWord = tempWord + ' ' + item
+                            tempWord = tempWord + item + " "
                         x = x+1
                 else : 
                     tempWord = ""
                     for item in tempWord1:
                         tempWord = tempWord + item + " "
                 university = tempWord
+                #print len(university)
+                #print len(universitas)
+                #sys.exit()
                 if (universitas == university):
                     print university + "> valid as webpage"
+                    #sys.exit()
                     tempQuery = 'UPDATE indexUniv SET valid = "Y" WHERE Id = '+str(tempI+1)+' ;'
                     self.write_dataSQL(tempQuery)
                     if self.check_dbInfoUniv(tempI+1) == 0:
@@ -458,6 +462,7 @@ class info(object):
                     self.prodi(tempCPoint, tempDfProdi)
                 else:
                     print university + "> has no valid data"
+                    #sys.exit()
                     #sys.exit('Line 437')
                     tempQuery = 'UPDATE indexUniv SET valid = "N" WHERE Id = '+str(tempI+1)+' ;'
                     self.write_dataSQL(tempQuery)
