@@ -377,10 +377,18 @@ class info(object):
                 for item in tempWord1:
                     tempWord = tempWord + item + " "
                 universitas = tempWord
-                tempWord = ""
                 tempWord1 = university.split()
-                for item in tempWord1:
-                    tempWord = tempWord + item + " "
+                if tempWord1[1] + ' '+ tempWord1[2] == 'Islam Negeri':
+                    x = 0
+                    tempWord = 'IAIN'
+                    for item in tempWord1:
+                        if x > 2 :
+                            tempWord = tempWord + ' ' + item
+                        x = x+1
+                else : 
+                    tempWord = ""
+                    for item in tempWord1:
+                        tempWord = tempWord + item + " "
                 university = tempWord
                 if (universitas == university):
                     print university + "> valid as webpage"
