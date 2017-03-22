@@ -51,13 +51,14 @@ for record in scrape.findAll('td'):
 	        print inRecord
 	        dataAkreditasi['wilayah'].append(inRecord)
 	    elif counter%10 == 2:
-	        if inRecord == 'D-IV':
+	        if inRecord == 'D-IV ':
 	            inRecord = 'D4'
-	        elif inRecord == 'D-III':
+	        elif inRecord == 'D-III ':
 	            inRecord = 'D3'
-	        elif inRecord == 'D-II':
+	            print inRecord
+	        elif inRecord == 'D-II ':
 	            inRecord = 'D2'
-	        elif inRecord == 'D-I':
+	        elif inRecord == 'D-I ':
 	            inRecord = 'D1'
 	        print inRecord
 	        dataAkreditasi['strata'].append(inRecord)
