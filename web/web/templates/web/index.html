@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>{{ siteName }}</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content='' name='description' />
+    <meta content='' name='author' />
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'web/css/custom.css' %}"/>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class='navbar navbar-default navbar-static-top'>
+      <div class='container-fluid'>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class='navbar-brand' href='#'>{{siteName}}</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Map</a></li>
+            <li class='active'><a href="/about">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-md-4'>
+          <div class='well'>
+
+            <h4>
+              Lokasi<small> (<a id='find_me' href='#'> cari saya </a>)</small>
+            </h4>
+            <p>
+              <input class='form-control' id='search_address' placeholder='Lokasi keberadaan' type='text' />
+            </p>
+
+            <p>
+              <label>
+                Dalam Radius
+                <select id='search_radius'>
+                  <option value='400'>2 blocks</option>
+                  <option value='805'>1/2 mile</option>
+                  <option value='1610'>1 mile</option>
+                  <option value='3220'>2 miles</option>
+                </select>
+              </label>
+            </p>
+
+            <h4>
+              Program Studi
+            </h4>
+            <p>
+              <input class='form-control' id='search_prodi' placeholder='Masukkan program studi yang ingin dicari' type='text' />
+            </p>
+            <p>
+              <label>
+                Jenjang Pendidikan
+                <select id='search_jenjang_pendidikan'>
+                  <option value="all">ALL</option>
+                  <option value="D1">D1</option>
+                  <option value="D2">D2</option>
+                  <option value='D3'>D3</option>
+                  <option value='S1'>S1</option>
+                  <option value='S2'>S2</option>
+                  <option value='S3'>S3</option>
+                  
+                </select>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                Akreditasi
+                <select id='search_akreditasi'>
+                  <option value="all">ALL</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value='C'>C</option>
+                  
+                </select>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                Jumlah Mahasiswa Minimal
+                <select id='search_jumlah_mahasiswa'>
+                  <option value="0">0</option>
+                  <option value="10">10</option>
+                  <option value='25'>25</option>
+                  <option value="50">50</option>
+                </select>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                Jumlah Dosen S2 Minimal
+                <select id='search_jumlah_dosen_s2'>
+                  <option value="0">0</option>
+                  <option value="5">5</option>
+                  <option value='10'>10</option>
+                </select>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                Jumlah Dosen S3 Minimal
+                <select id='search_jumlah_dosen_s3'>
+                  <option value="0">0</option>
+                  <option value="5">5</option>
+                  <option value='10'>10</option>
+                </select>
+              </label>
+            </p>
+
+
+            <br />
+            <div class='row'>
+              <div class='col-md-6'>
+                
+              </div>
+              <div class='col-md-6'>
+                
+              </div>
+            </div>
+            <br />
+            <a class='btn btn-primary' id='search' href='#'>
+              <i class='glyphicon glyphicon-search'></i>
+              Search
+            </a>
+            <a class='btn btn-default' id='reset' href='#'>
+              <i class='glyphicon glyphicon-repeat'></i>
+              Reset
+            </a>
+          </div>
+          <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
+        </div>
+        <div class='col-md-8'>
+          <noscript>
+            <div class='alert alert-info'>
+              <h4>Your JavaScript is disabled</h4>
+              <p>Please enable JavaScript to view the map.</p>
+            </div>
+          </noscript>
+          <div id='map_canvas'></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="{% static 'web/js/jquery-1.12.4.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'web/js/jquery.address.js'%}"></script>
+    <script type="text/javascript" src="{% static 'web/js/bootstrap.min.js'%}"></script>
+    
+    <script>
+      function myMap() {
+      //pin location on map
+      var mapProp= {
+          center:new google.maps.LatLng(-7.7713847,110.3774998),
+          zoom:5,
+          disableDefaultUI: true, // disable control google maps
+          //mapTypeId:google.maps.MapTypeId.HYBRID,
+      };
+      var map = new google.maps.Map(document.getElementById("map_canvas"),mapProp);
+      //create marker
+      var marker = new google.maps.Marker({
+        position: mapProp.center,
+        animation:google.maps.Animation.BOUNCE
+        //icon:'pinkball.png'
+      });
+      marker.setMap(map);
+
+      //create content window
+      var infowindow = new google.maps.InfoWindow({
+        content:"Hello World!"
+      });
+
+
+      // Zoom to 9 when clicking on marker
+      google.maps.event.addListener(marker,'click',function() {
+        infowindow.open(map,marker);
+        var pos = map.getZoom(); //zoom out or back
+        map.setZoom(18);
+        map.setCenter(marker.getPosition());
+        window.setTimeout(function() {map.setZoom(pos);},10000); //zoom out or back
+
+      });
+
+
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAYR9KuDYoLvPO8KkCudMj77GVQPiU6so&callback=myMap"></script>
+    
+      </body>
+</html>
